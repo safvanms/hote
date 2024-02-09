@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --textColor: #412626;
+  --bg: #e6f2f2;
+  --coffee: #4a2c00;
+  --espresso: #362819;
+}
+
+.GenFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  scrollbar-color: transparent transparent;
+}

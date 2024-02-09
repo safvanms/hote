@@ -1,0 +1,25 @@
+.home {
+  padding: 20px 10px;
+}
+
+.home_heads {
+  gap: 20px;
+  font-size: 30px;
+}
+
+.home_heads h1:nth-child(1) {
+    color: var(--coffee);
+  }
+
+.home_heads h1:nth-child(2) {
+  color: var(--espresso);
+}
+
+@media (max-width: 799px) {
+  .home_heads {
+    font-size: 24px;
+    flex-direction: column;
+    margin: 0;
+    gap: 0px;
+  }
+}

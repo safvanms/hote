@@ -1,0 +1,65 @@
+.review {
+  padding: 50px 0;
+}
+
+.review_container {
+  justify-content: center;
+  gap: 150px;
+}
+
+.review_left img {
+  width: 400px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.review_right form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.review_right h1 {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.review_right form input,
+.review_right form textarea {
+  width: 300px;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  outline-color: #3a565d;
+  font-family: inherit;
+}
+
+.review_right form button {
+  width: 30%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-family: inherit;
+  background: linear-gradient(
+    to right,
+    var(--espresso),
+    var(--espresso),
+    var(--coffee)
+  );
+  color: #ffff;
+}
+
+@media (max-width: 799px) {
+  .review_container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .review_left img {
+    width: 80%;
+    margin-bottom: 25px;
+  }
+}
