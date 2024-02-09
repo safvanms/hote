@@ -4,7 +4,7 @@ import './footer.css'
 const Footer = () => {
   return (
     <div className='footer GenFlex'>
-      @hoté2024 , All right reserved
+      @ hoté intl 2024 , All right reserved.
     </div>
   )
 }

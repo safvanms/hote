@@ -1,0 +1,119 @@
+.header {
+  justify-content: space-between;
+  padding: 10px 40px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: sticky;
+  background-color: #ffff;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: 0.5s ease-in;
+}
+
+.header_left div {
+  gap: 20px;
+}
+
+.header_left img {
+  width: 150px;
+}
+
+.logo {
+  width: 60px !important;
+}
+
+.header_right {
+  gap: 30px;
+}
+
+.header_right ul {
+  list-style: none;
+  gap: 30px;
+  color: var(--espresso) !important;
+}
+
+.header_right ul > li {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.header_right > ul > li .active {
+  font-weight: 900;
+}
+
+.header_right ul > li:hover {
+  font-weight: 700;
+}
+
+.header_right button {
+  padding: 5px 20px;
+  font-size: 12px;
+  font-family: inherit;
+  border: none;
+  border-radius: 7px;
+  background-color: var(--coffee);
+  color: #ffff;
+}
+
+.header_right button:hover {
+  background-color: var(--espresso) !important;
+  cursor: pointer;
+  color: gray;
+}
+
+.sm_screen_btn,
+.sm_screen_option {
+  display: none;
+}
+
+@media (max-width: 799px) {
+  .sm_screen_btn {
+    display: block;
+    margin-top: 18px;
+  }
+
+  .lg_screen_menu,
+  .lg_logo {
+    display: none;
+  }
+
+  .sm_screen_option {
+    display: block;
+    width: 90%;
+  }
+
+  .sm_screen_option ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    height: 90dvh;
+    transition: 0.5s ease-in;
+    padding-top: 60px;
+    font-size: 21px;
+  }
+
+  .sm_screen_option ul li :hover {
+    font-weight: 700;
+  }
+
+  .header {
+    align-items: flex-start;
+  }
+
+  .review_btn {
+    padding: 5px 20px;
+    font-family: "DM Sans", sans-serif;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--coffee);
+    color: #ffff;
+    width: 110px;
+  }
+
+  .sm_option_footer {
+    text-align: center;
+    padding: 15px 0;
+  }
+}

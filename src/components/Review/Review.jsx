@@ -1,7 +1,10 @@
 import React, { useRef, useState } from "react";
 import "./review.css";
-import coffee from "../../assets/images/coffee.jpg";
+import Logo from "../../assets/images/hoté_intl_logo.png";
 import emailjs from "@emailjs/browser";
+
+const reviewStuff =
+  "We value your reviews either positive or negative. Your feedback helps us improve our services and serve you better. Thank you for taking the time to share your thoughts with us. Your opinions matter to us and contribute to the continual enhancement of our offerings. We strive to provide an exceptional experience to each and every customer, and your feedback plays a crucial role in achieving that goal. Your satisfaction is our priority, and we are grateful for your support. Your reviews inspire us to maintain the highest standards of quality and customer service. We appreciate your trust and loyalty to our brand and look forward to serving you again soon and exceeding your expectations. Thank you for choosing us as your preferred destination for hoté intl and for being a valued member of our community.";
 
 const Review = () => {
   const [clicked, setClicked] = useState(false);
@@ -31,35 +34,41 @@ const Review = () => {
   };
 
   return (
-    <div className="review">
-      <div className="review_container GenFlex">
-        <div className="review_left GenFlex">
-          <img src={coffee} alt="item" />
-        </div>
-        <div className="review_right">
-          <h1>Write a Review</h1>
+    <>
+      <div className="review GenFlex" id="review">
+        <div className="review_container GenFlex">
+          <div className="review_left GenFlex">
+            <img src={Logo} alt="item" />
+          </div>
+          <div className="review_right">
+            <h1>Write your Reviews</h1>
 
-          <form onSubmit={sendEmail} ref={form}>
-            <input
-              type="text"
-              name="account"
-              placeholder="Enter your email / Phone Number"
-              required
-            />
-            <textarea
-              type="text"
-              name="message"
-              placeholder="Message..."
-              required
-            />
-            <button type="submit" value="Send">
-              {clicked ? "Sending" : done ? "Sent" : "Send"}
-            </button>
-            {done && "Thanks for your Review :) "}
-          </form>
+            <form onSubmit={sendEmail} ref={form}>
+              <input
+                type="text"
+                name="account"
+                placeholder="Enter your email / Phone Number"
+                required
+              />
+              <textarea
+                type="text"
+                rows={4}
+                name="message"
+                placeholder="Write your reviews and suggestions..."
+                required
+              />
+              <button type="submit" value="Send">
+                {clicked ? "Sending" : done ? "Sent" : "Send"}
+              </button>
+              {done && "Thanks for your Review :) "}
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+      <div className="GenFlex">
+        <p className="review_stuff ">{reviewStuff}</p>
+      </div>
+    </>
   );
 };
 

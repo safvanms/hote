@@ -3,20 +3,21 @@ import MasalaChai from "./assets/images/masala_chai.webp";
 import Green from "./assets/images/green.webp";
 import Mint from "./assets/images/mint.webp";
 import Ginger from "./assets/images/ginger.jpeg";
-import Lemon from "./assets/images/Lemon.jpg";
+import Lemon_Honey from "./assets/images/lemon_honey.jpg";
 import Black from "./assets/images/black.webp";
 import Coffee from "./assets/images/coffee.jpg";
+import Saffron from "./assets/images/saffron.webp";
 
-const products = [
+export const products = [
   {
     id: 1,
-    item: "HOté Chai",
+    item: "hoté chai",
     image: Chai,
     desc: "Freshy milk with some solid Hotie hot tea ",
   },
   {
     id: 2,
-    item: "Masala Chai",
+    item: "Masala chai",
     image: MasalaChai,
     desc: "Simmering the tea leaves with spices , and milk ",
   },
@@ -27,6 +28,12 @@ const products = [
     desc: "Healthy Green tea with purity of leaves ",
   },
   {
+    id: 11,
+    item: "Saffron tea",
+    image: Saffron,
+    desc: "Simmers the Saffron with rose feels flying... ",
+  },
+  {
     id: 4,
     item: "Mint tea",
     image: Mint,
@@ -34,8 +41,8 @@ const products = [
   },
   {
     id: 5,
-    item: "Lemon tea",
-    image: Lemon,
+    item: "Lemon & Honey tea",
+    image: Lemon_Honey,
     desc: "We calls it as citric tea , always better ",
   },
   {
@@ -58,4 +65,106 @@ const products = [
   },
 ];
 
-export default products;
+// Menu items
+
+export const menus = [
+  {
+    no: 1,
+    category: "Tea",
+    items: [
+      {
+        id: 1,
+        name: "hoté chai",
+        price: 15,
+      },
+      {
+        id: 8,
+        name: "Black tea",
+        price: 10,
+      },
+      {
+        id: 4,
+        name: "Mint chai",
+        price: 15,
+      },
+      {
+        id: 5,
+        name: "Ginger chai",
+        price: 15,
+      },
+      {
+        id: 6,
+        name: "Lemon & Honey chai",
+        price: 15,
+      },
+      {
+        id: 2,
+        name: "Masala chai",
+        price: 20,
+      },
+      {
+        id: 7,
+        name: "Green tea",
+        price: 20,
+      },
+      {
+        id: 3,
+        name: "Saffron chai",
+        price: 40,
+      },
+    ],
+  },
+  {
+    no: 2,
+    category: "Coffee",
+    items: [
+      {
+        id: 1,
+        name: "Black coffee",
+        price: 10,
+      },
+      {
+        id: 1,
+        name: "Bru coffee",
+        price: 20,
+      },
+      {
+        id: 1,
+        name: "Nescafe coffee",
+        price: 25,
+      },
+      {
+        id: 1,
+        name: "Normal Coffee",
+        price: 15,
+      },
+    ],
+  },
+  {
+    no: 3,
+    category: "Other",
+    items: [
+      {
+        id: 1,
+        name: "Horlics",
+        price: 20,
+      },
+      {
+        id: 2,
+        name: "Boost",
+        price: 20,
+      },
+    ],
+  },
+  {
+    no: 3,
+    category: "Snacks",
+    items: [
+      {
+        id: 1,
+        name: "Coming Soon ! ",
+        price: '',
+      },
+    ],
+  },
+];

@@ -1,6 +1,6 @@
 import React from "react";
 import "./teaCard.css";
-import products from "../../constants";
+import { products } from "../../constants";
 
 const TeaCards = () => {
   return (
@@ -11,7 +11,7 @@ const TeaCards = () => {
       <div className="cards GenFlex">
         {products?.map(({ id, item, image, desc }) => (
           <div className="card" key={id}>
-            <div className="hover_overlay">hoté</div>
+            <div className="hover_overlay">hoté intl </div>
             <img src={image} alt="item" />
             <div className="item">
               <h3>{item}</h3>
