@@ -3,12 +3,13 @@ import "./about.css";
 
 import main from "../../assets/images/hoté_intl_logo.png";
 import sub from "../../assets/images/hoté_intl.png";
-import keepCityClean from "../../assets/images/keepcityclean.png";
+import Sticker from "../Stickers/Sticker";
 
 const About = () => {
   return (
     <div className="about GenFlex">
       <div className="about_sec GenFlex">
+        <h1>About us</h1>
         <p>
           Welcome to hoté international <strong>hoté intl</strong> , where
           tradition meets innovation. Founded in 2024, we are dedicated to
@@ -26,10 +27,7 @@ const About = () => {
         <img src={main} alt="logo" />
         <img src={sub} alt="logo" />
       </div>
-
-      <div className="about_footer_banner GenFlex">
-        <img src={keepCityClean} alt="keep_city_clean" className="keep_city_clean" />
-      </div>
+      <Sticker/>
     </div>
   );
 };

@@ -2,9 +2,10 @@ import React from 'react'
 import './footer.css'
 
 const Footer = () => {
+  const year = new Date().getFullYear()
   return (
     <div className='footer GenFlex'>
-      @ 2024 hoté intl . All right reserved.
+      @ {year} hoté intl . All right reserved.
     </div>
   )
 }

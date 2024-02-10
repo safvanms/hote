@@ -15,6 +15,8 @@ const Header = () => {
     setClicked(!clicked);
   };
 
+  const year = new Date().getFullYear();
+
   const styles = {
     textDecoration: "none",
     color: "#362819",
@@ -102,12 +104,13 @@ const Header = () => {
                 style={{ textDecoration: "none", color: "#fff" }}
                 activeClassName="active"
               >
-                Write a Review  {'  '}<LuPenTool style={{marginTop:"5px"}} size={21}/>
+                Write a Review {"  "}
+                <LuPenTool style={{ marginTop: "5px" }} size={21} />
               </NavLink>
             </li>
           </ul>
           <div className="sm_option_footer">
-            @ hoté intl 2024 , All right reserved.
+            @ {year} hoté intl , All right reserved.
           </div>
         </div>
       )}
