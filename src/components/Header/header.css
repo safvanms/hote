@@ -46,7 +46,7 @@
 }
 
 .header_right button {
-  padding: 5px 20px;
+  padding: 8px 25px;
   font-size: 12px;
   font-family: inherit;
   border: none;
@@ -88,10 +88,11 @@
     flex-direction: column;
     gap: 25px;
     padding: 20px;
-    height: 90dvh;
+    height: 90vh;
     transition: 0.5s ease-in;
     padding-top: 60px;
     font-size: 21px;
+    z-index: 9999;
   }
 
   .sm_screen_option ul li :hover {
@@ -103,17 +104,18 @@
   }
 
   .review_btn {
-    padding: 5px 20px;
+    padding: 7px 20px;
     font-family: "DM Sans", sans-serif;
     border: none;
     border-radius: 7px;
     background-color: var(--coffee);
     color: #ffff;
-    width: 110px;
   }
 
   .sm_option_footer {
     text-align: center;
     padding: 15px 0;
+    white-space: nowrap;
+    font-size: 12px;
   }
 }

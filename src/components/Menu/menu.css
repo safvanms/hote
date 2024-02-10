@@ -25,7 +25,7 @@
 }
 
 .list_head {
- margin-bottom: 15px;
+  margin-bottom: 15px;
   color: #379668;
   font-size: 31px;
 }
@@ -45,8 +45,8 @@
   gap: 40px;
 }
 
-.home_return{
-    display: none;
+.home_return {
+  display: none;
 }
 
 @media (max-width: 799px) {
@@ -61,9 +61,9 @@
   .menu_list li {
     width: 85vw;
   }
-  .home_return{
+  .home_return {
     display: block;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }

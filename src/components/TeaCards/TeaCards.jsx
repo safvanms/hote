@@ -5,9 +5,9 @@ import { products } from "../../constants";
 const TeaCards = () => {
   return (
     <div className="cards_container">
-      <div className="card_heading">
+      {/* <div className="card_heading">
         <h2>We Serves </h2>
-      </div>
+      </div> */}
       <div className="cards GenFlex">
         {products?.map(({ id, item, image, desc }) => (
           <div className="card" key={id}>

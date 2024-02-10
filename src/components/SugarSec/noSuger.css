@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Signika:wght@300..700&display=swap");
+
+.noSugar {
+  padding: 0 0 50px 0;
+}
+
+.no_sugar_container {
+  position: relative;
+  padding: 25px 0;
+  font-family: "RocknRoll One", sans-serif;
+  padding-inline: 20px;
+  gap: 50px;
+}
+
+.no_sugar_quote,
+.no_sugar_image {
+  width: 45%;
+}
+
+.no_sugar_image img {
+  width: 80%;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+  overflow: visible;
+}
+
+.no_sugar_texts {
+  flex-direction: column;
+}
+
+.no_sugar_texts h1:nth-child(1) {
+  font-size: 44px;
+  color: Black;
+  white-space: nowrap;
+}
+
+.no_sugar_texts h1:nth-child(2) {
+  font-size: 54px;
+  background: linear-gradient(to bottom, rgb(129, 0, 0), Black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+@media (max-width: 799px) {
+  .no_sugar_container {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .no_sugar_image img {
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+    width: 200%;
+  }
+
+  .no_sugar_texts h1:nth-child(1) {
+    font-size: 17px;
+    white-space: nowrap;
+  }
+
+  .no_sugar_texts h1:nth-child(2) {
+    font-size: 24px;
+  }
+
+  /* soft drink */
+  .no_sugar_quote:nth-child(2) {
+    position: absolute;
+    z-index: 10;
+    left: 50px;
+    bottom: 40px;
+  }
+
+  /* sugar */
+
+  .no_sugar_quote:nth-child(1) {
+    position: absolute;
+    z-index: 10;
+    right: 20px;
+    bottom: 40px;
+    margin-top: 45px;
+  }
+
+  /* 
+  .no_sugar_image:nth-child(1) {
+    position: absolute;
+    z-index: 0;
+    width: 90%;
+    right: 5;
+    top: -50px;
+  }
+
+  .no_sugar_quote:nth-child(2) {
+    position: absolute;
+    z-index: 10;
+    left: 50px;
+    bottom: -20px;
+    margin-top: 85px;
+  }
+
+  /* sugar */
+
+  /* .sec2 {
+    margin-top: 60px;
+  }
+
+  .no_sugar_image:nth-child(2) {
+    position: absolute;
+    z-index: 0;
+    left: 15px;
+    width: 95%;
+    bottom: 30px;
+  }
+
+  .no_sugar_quote:nth-child(1) {
+    position: absolute;
+    z-index: 10;
+    right: 40px;
+    top: 20px;
+    margin-top: 45px;
+  } */
+}

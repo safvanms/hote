@@ -3,6 +3,7 @@ import "./header.css";
 import { NavLink } from "react-router-dom";
 import { PiHamburgerDuotone } from "react-icons/pi";
 import { GiKnifeFork } from "react-icons/gi";
+import { LuPenTool } from "react-icons/lu";
 
 import LOGO from "../../assets/images/hoté_intl_logo.png";
 import sub_logo from "../../assets/images/hoté_intl.png";
@@ -56,7 +57,7 @@ const Header = () => {
             style={{ textDecoration: "none", color: "#fff" }}
             activeClassName="active"
           >
-            Review
+            Write a Review
           </NavLink>
         </button>
       </div>
@@ -101,7 +102,7 @@ const Header = () => {
                 style={{ textDecoration: "none", color: "#fff" }}
                 activeClassName="active"
               >
-                Review
+                Write a Review  {'  '}<LuPenTool style={{marginTop:"5px"}} size={21}/>
               </NavLink>
             </li>
           </ul>
