@@ -10,6 +10,7 @@ const Review = () => {
   const [clicked, setClicked] = useState(false);
   const [done, setDone] = useState(false);
   const [expand, setExpand] = useState(false);
+  const [showWarning, setShowWarning] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -38,6 +39,23 @@ const Review = () => {
     setExpand(!expand);
   };
 
+  const handleKeyPress = (e) => {
+    // const inputValue = e.target.value.toLowerCase();
+    if (showWarning === true) {
+      return;
+    } else if (e.key !== "Backspace" && e.target.value.trim().length >= 0) {
+      alert(
+        "Please refrain from including any inappropriate / sexual / racist /abusive contents in your review."
+      );
+      setShowWarning(true);
+    }
+    // else if (
+    //   badWords.some((word) => inputValue.includes(word.toLowerCase()))
+    // ) {
+    //   alert("Please do not write any unusual or abusive contents.");
+    // }
+  };
+
   return (
     <>
       <div className="review GenFlex" id="review">
@@ -56,6 +74,7 @@ const Review = () => {
                 required
               />
               <textarea
+                onKeyPress={handleKeyPress}
                 type="text"
                 rows={4}
                 name="message"
@@ -73,7 +92,10 @@ const Review = () => {
       <div className="GenFlex">
         <p className="review_stuff ">
           {expand ? reviewStuff : reviewStuff.slice(0, 150) + "..."}
-          <span onClick={toggleExpand} style={{ cursor: "pointer" , color:"darkblue"}}>
+          <span
+            onClick={toggleExpand}
+            style={{ cursor: "pointer", color: "darkblue" }}
+          >
             {expand ? " read less" : "read more"}
           </span>
         </p>

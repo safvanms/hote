@@ -3,7 +3,6 @@ import "./header.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { PiHamburgerDuotone } from "react-icons/pi";
 import { GiKnifeFork } from "react-icons/gi";
-import { LuPenTool } from "react-icons/lu";
 
 import LOGO from "../../assets/images/hoté_intl_logo.png";
 import sub_logo from "../../assets/images/hoté_intl.png";
@@ -51,7 +50,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink to={"/about"} style={styles} activeClassName="active">
-              About
+              About Us
             </NavLink>
           </li>
           <li>
@@ -95,7 +94,7 @@ const Header = () => {
               activeClassName="active"
               onClick={() => setClicked(false)}
             >
-              <li>About</li>
+              <li>About Us</li>
             </NavLink>
             <NavLink
               to={"/contact"}
@@ -103,7 +102,7 @@ const Header = () => {
               activeClassName="active"
               onClick={() => setClicked(false)}
             >
-              <li>Contact</li>
+              <li>Contact Us</li>
             </NavLink>
             <li className="review_btn" onClick={() => setClicked(false)}>
               <NavLink
@@ -111,8 +110,7 @@ const Header = () => {
                 style={{ textDecoration: "none", color: "#fff" }}
                 activeClassName="active"
               >
-                Write a Review {"  "}
-                <LuPenTool style={{ marginTop: "5px" }} size={21} />
+                Write a Review
               </NavLink>
             </li>
           </ul>

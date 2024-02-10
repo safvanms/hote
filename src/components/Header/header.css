@@ -110,6 +110,8 @@
     border-radius: 7px;
     background-color: var(--coffee);
     color: #ffff;
+    text-align: center;
+    font-weight: normal;
   }
 
   .sm_option_footer {
