@@ -9,6 +9,7 @@ const reviewStuff =
 const Review = () => {
   const [clicked, setClicked] = useState(false);
   const [done, setDone] = useState(false);
+  const [expand, setExpand] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -31,6 +32,10 @@ const Review = () => {
           console.error(error);
         }
       );
+  };
+
+  const toggleExpand = () => {
+    setExpand(!expand);
   };
 
   return (
@@ -66,7 +71,12 @@ const Review = () => {
         </div>
       </div>
       <div className="GenFlex">
-        <p className="review_stuff ">{reviewStuff}</p>
+        <p className="review_stuff ">
+          {expand ? reviewStuff : reviewStuff.slice(0, 150) + "..."}
+          <span onClick={toggleExpand} style={{ cursor: "pointer" , color:"darkblue"}}>
+            {expand ? " read less" : "read more"}
+          </span>
+        </p>
       </div>
     </>
   );

@@ -1,0 +1,65 @@
+.about {
+  padding: 40px 0;
+  flex-direction: column;
+}
+
+.about_sec {
+  width: 60%;
+  font-size: 24px;
+  text-align: justify;
+  padding: 20px 0 50px 0;
+}
+
+.about_logos {
+  gap: 100px;
+}
+
+.about_logos img:nth-child(1) {
+  width: 100px;
+}
+
+.about_logos img:nth-child(2) {
+  width: 300px;
+}
+
+.about_footer_banner {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #eeeeeeaa;
+  padding: 5px;
+}
+
+.keep_city_clean {
+  width: 60px;
+}
+
+@media (max-width: 799px) {
+  .about {
+    padding: 10px 0;
+    height: 90vh;
+  }
+
+  .about_sec {
+    align-items: flex-start;
+    width: 90%;
+    font-size: 15px;
+    text-align: justify;
+    padding: 10px 0 60px 0;
+  }
+
+  .about_logos {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .about_logos img:nth-child(1) {
+    width: 20%;
+  }
+
+  .about_logos img:nth-child(2) {
+    width: 50%;
+  }
+  .keep_city_clean {
+    width: 40px;
+  }
+}

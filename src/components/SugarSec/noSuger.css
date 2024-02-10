@@ -23,6 +23,10 @@
   overflow: visible;
 }
 
+.cleanCity {
+  width: 50% !important;
+}
+
 .no_sugar_texts {
   flex-direction: column;
 }
@@ -61,6 +65,10 @@
     font-size: 24px;
   }
 
+  .cleanCity {
+    width: 100% !important;
+  }
+
   /* soft drink */
   .no_sugar_quote:nth-child(2) {
     position: absolute;
@@ -78,43 +86,4 @@
     bottom: 40px;
     margin-top: 45px;
   }
-
-  /* 
-  .no_sugar_image:nth-child(1) {
-    position: absolute;
-    z-index: 0;
-    width: 90%;
-    right: 5;
-    top: -50px;
-  }
-
-  .no_sugar_quote:nth-child(2) {
-    position: absolute;
-    z-index: 10;
-    left: 50px;
-    bottom: -20px;
-    margin-top: 85px;
-  }
-
-  /* sugar */
-
-  /* .sec2 {
-    margin-top: 60px;
-  }
-
-  .no_sugar_image:nth-child(2) {
-    position: absolute;
-    z-index: 0;
-    left: 15px;
-    width: 95%;
-    bottom: 30px;
-  }
-
-  .no_sugar_quote:nth-child(1) {
-    position: absolute;
-    z-index: 10;
-    right: 40px;
-    top: 20px;
-    margin-top: 45px;
-  } */
 }
