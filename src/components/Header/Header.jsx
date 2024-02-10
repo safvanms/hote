@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./header.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { PiHamburgerDuotone } from "react-icons/pi";
 import { GiKnifeFork } from "react-icons/gi";
 import { LuPenTool } from "react-icons/lu";
@@ -10,6 +10,7 @@ import sub_logo from "../../assets/images/hoté_intl.png";
 
 const Header = () => {
   const [clicked, setClicked] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -22,11 +23,17 @@ const Header = () => {
     color: "#362819",
   };
 
+  const getBackHome = () => {
+    navigate("/");
+  };
+
   return (
     <div className="header GenFlex">
       <div className="header_left">
         <div className="GenFlex">
-          {!clicked && <img src={LOGO} alt="logo" className="logo" />}
+          {!clicked && (
+            <img src={LOGO} alt="logo" className="logo" onClick={getBackHome} />
+          )}
           <img src={sub_logo} alt="logo" className="lg_logo" />
         </div>
       </div>
