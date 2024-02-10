@@ -5,7 +5,7 @@ const Footer = () => {
   const year = new Date().getFullYear()
   return (
     <div className='footer GenFlex'>
-      @ {year} hoté intl . All right reserved.
+      © {year} hoté intl . All right reserved.
     </div>
   )
 }

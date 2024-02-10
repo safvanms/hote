@@ -115,7 +115,7 @@ const Header = () => {
             </li>
           </ul>
           <div className="sm_option_footer">
-            @ {year} hoté intl , All right reserved.
+            © {year} hoté intl , All right reserved.
           </div>
         </div>
       )}
