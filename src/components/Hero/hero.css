@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+
+.hero_container {
+  padding: 30px 0 50px 0;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.hero_left , .drop{
+  padding-inline: 20px;
+  font-family: "Dancing Script", cursive;
+  font-size: 28px;
+  z-index: 10;
+}
+
+.hero_right {
+  z-index: 10;
+}
+
+.hero_right img {
+  width: 650px;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.2));
+}
+
+.hero_left h1:nth-child(1) {
+  color: var(--espresso);
+}
+
+.hero_left h1:nth-child(2) {
+  color: var(--coffee);
+}
+
+.hero_left h1:nth-child(3) {
+  color: var(--textColor);
+}
+
+@media (min-width: 800px) {
+  .in-blur1 {
+    background: #efefefad;
+    top: -15rem;
+    width: 41rem;
+    height: 45rem;
+    right: -11rem;
+  }
+
+  .in-blur2 {
+    background: #efefefad;
+    top: 38rem;
+    width: 43rem;
+    height: 42rem;
+    left: -15rem;
+  }
+}
+
+@media (max-width: 799px) {
+  .hero_left {
+    font-size: 28px;
+  }
+
+  .drop{
+    font-size: 25px;
+    text-align: right;
+  }
+
+  .hero_right img {
+    width: 100%;
+  }
+  .in-blur1 {
+    background: #efefefad;
+    top: -6rem;
+    width: 21rem;
+    height: 25rem;
+    right: -11rem;
+  }
+
+  .in-blur2 {
+    background: #efefefad;
+    top: 38rem;
+    width: 23rem;
+    height: 22rem;
+    left: -8rem;
+  }
+}

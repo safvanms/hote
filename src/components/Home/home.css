@@ -5,6 +5,7 @@
 .home_heads {
   gap: 20px;
   font-size: 30px;
+  padding-bottom: 40px;
 }
 
 .home_heads h1:nth-child(1) {
@@ -21,5 +22,6 @@
     flex-direction: column;
     margin: 0;
     gap: 0px;
+    background-color: transparent;
   }
 }

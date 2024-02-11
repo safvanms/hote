@@ -17,6 +17,17 @@
   align-items: center;
 }
 
+.blur {
+  position: absolute;
+  width: 2rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #503636;
+  z-index: -9;
+  top: 10px;
+  filter: blur(75px);
+}
+
 /* * {
   scrollbar-color: transparent transparent;
 } */

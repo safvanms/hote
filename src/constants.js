@@ -95,7 +95,7 @@ export const menus = [
       {
         id: 6,
         name: "Lemon & Honey chai",
-        price: 15,
+        price: 20,
       },
       {
         id: 2,

@@ -7,12 +7,14 @@ import Home from "./components/Home/Home";
 import Menu from "./components/Menu/Menu";
 import Review from "./components/Review/Review";
 import About from "./components/About/About";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <div>
       <BrowserRouter>
         <Header />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />

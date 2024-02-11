@@ -36,6 +36,7 @@ const Header = () => {
           <img src={sub_logo} alt="logo" className="lg_logo" />
         </div>
       </div>
+
       <div className="header_right GenFlex lg_screen_menu">
         <ul className=" GenFlex">
           <li>
@@ -69,6 +70,7 @@ const Header = () => {
           </NavLink>
         </button>
       </div>
+
       {clicked && (
         <div className="sm_screen_option">
           <ul>
@@ -114,6 +116,7 @@ const Header = () => {
               </NavLink>
             </li>
           </ul>
+
           <div className="sm_option_footer">
             © {year} hoté intl , All right reserved.
           </div>
