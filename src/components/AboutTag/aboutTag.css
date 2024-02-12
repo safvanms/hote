@@ -1,0 +1,22 @@
+.about_tag {
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 30px 120px;
+  background-color: var(--espresso);
+  color: #fff;
+  cursor: pointer;
+}
+
+.about_tag p {
+  font-size: 19px;
+}
+
+@media (max-width: 799px) {
+  .about_tag {
+    padding: 30px 15px;
+  }
+
+  .about_tag p {
+    font-size: 15px;
+  }
+}

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <>
       <div className="hero_container GenFlex">
-        <div className="hero_left">
+        <div className="hero_left GenFlex">
           <h1>Read...</h1>
           <h1>Sip...</h1>
           <h1>One of the best combinations.</h1>

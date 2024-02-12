@@ -1,0 +1,15 @@
+.learnMore{
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 11px;
+    border: 1px solid #fff;
+    color: #fff;
+    white-space: nowrap;
+}
+
+@media (max-width: 799px) {
+    .learnMore {
+     font-size: 9px;
+    }
+  }
+  

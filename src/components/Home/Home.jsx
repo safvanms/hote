@@ -3,6 +3,7 @@ import "./home.css";
 import TeaCards from "../TeaCards/TeaCards";
 import NoSugar from "../SugarSec/NoSugar";
 import Hero from "../Hero/Hero";
+import AboutTag from "../AboutTag/AboutTag";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
           <h1>Order a cup !</h1>
         </div>
       </div> */}
+      <AboutTag/>
       <TeaCards />
       <NoSugar />
     </>
