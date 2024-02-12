@@ -13,7 +13,7 @@ export const products = [
     id: 1,
     item: "hoté chai",
     image: Chai,
-    desc: "Freshy milk with some solid Hotie hot tea ",
+    desc: "Freshy milk with some solid hoté hot tea ",
   },
   {
     id: 2,

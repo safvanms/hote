@@ -1,6 +1,8 @@
-.footer{
-   background-color: var(--espresso);
-   padding:20px;
-   color: #fff;
-   font-size: 10px;
+.footer {
+  background-color: var(--espresso);
+  padding: 20px;
+  color: #fff;
+  font-size: 10px;
+  flex-direction: column;
 }
+

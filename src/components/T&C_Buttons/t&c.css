@@ -1,0 +1,16 @@
+.t_and_c {
+  padding: 20px 0 5px 0;
+  justify-content: space-around;
+  background-color: var(--espresso);
+  margin-top: 20px;
+}
+
+.t_and_c p {
+  font-size: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.t_and_c p:hover {
+  color: blue;
+}

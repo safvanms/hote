@@ -1,6 +1,7 @@
 .about {
   padding: 40px 0;
   flex-direction: column;
+  gap: 30px;
 }
 
 .about_sec {
@@ -9,17 +10,19 @@
   font-size: 20px;
   text-align: justify;
   padding: 20px 0 50px 0;
+  gap: 20px;
 }
 
 .about_sec h1 {
   text-align: center;
-  margin-bottom: 20px;
   border-bottom: 1px solid #dddddd;
   padding-bottom: 4px;
+  margin: 40px 0;
 }
 
 .about_logos {
   gap: 100px;
+  margin-bottom: 10px;
 }
 
 .about_logos img:nth-child(1) {
@@ -30,11 +33,10 @@
   width: 300px;
 }
 
-
-
 @media (max-width: 799px) {
   .about {
     padding: 10px 0;
+    height: 100vh;
   }
 
   .about_sec {
@@ -59,7 +61,7 @@
     width: 35px;
   }
 
-  .blood{
+  .blood {
     width: 20px;
   }
 }

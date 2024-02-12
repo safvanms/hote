@@ -1,13 +1,15 @@
-import React from 'react'
-import './footer.css'
+import React from "react";
+import "./footer.css";
 
 const Footer = () => {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
-    <div className='footer GenFlex'>
-      © {year} hoté intl . All right reserved.
-    </div>
-  )
-}
+    <>
+      <div className="footer GenFlex">
+        <p>© {year} hoté intl . All right reserved.</p>
+      </div>
+    </>
+  );
+};
 
-export default Footer
+export default Footer;
