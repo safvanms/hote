@@ -13,6 +13,7 @@ const Review = () => {
   const [showWarning, setShowWarning] = useState(false);
   const form = useRef();
 
+  // function calls when onSubmitting for sent to the email
   const sendEmail = (e) => {
     e.preventDefault();
     setClicked(true);
@@ -39,6 +40,7 @@ const Review = () => {
     setExpand(!expand);
   };
 
+  // function for alerting the warning message for the user when typing the message textarea
   const handleKeyPress = (e) => {
     if (showWarning === true) {
       return;
@@ -82,17 +84,17 @@ const Review = () => {
             </form>
           </div>
         </div>
-      <div className="GenFlex">
-        <p className="review_stuff ">
-          {expand ? reviewStuff : reviewStuff.slice(0, 150) + "..."}
-          <span
-            onClick={toggleExpand}
-            style={{ cursor: "pointer", color: "darkblue" }}
-          >
-            {expand ? " read less" : "read more"}
-          </span>
-        </p>
-      </div>
+        <div className="GenFlex">
+          <p className="review_stuff ">
+            {expand ? reviewStuff : reviewStuff.slice(0, 150) + "..."}
+            <span
+              onClick={toggleExpand}
+              style={{ cursor: "pointer", color: "darkblue" }}
+            >
+              {expand ? " read less" : "read more"}
+            </span>
+          </p>
+        </div>
       </div>
     </>
   );

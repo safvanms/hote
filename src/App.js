@@ -11,12 +11,15 @@ import ScrollToTop from "./components/ScrollToTop";
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Contacts from "./components/Contacts/Contacts";
+import AllBlogs from "./components/AllBlogs/AllBlogs";
+import Blog from "./components/Blog/Blog";
 
 export default function App() {
   return (
     <div>
       <BrowserRouter>
         <Header />
+        {/*component for showing every component/page from top*/}
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -24,6 +27,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/review" element={<Review />} />
           <Route path="/contact" element={<Contacts />} />
+          <Route path="/blogs" element={<AllBlogs />} />
+          <Route path="/blogs/:id" element={<Blog />} />
           <Route path="/terms-and-condition" element={<TermsAndConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/*" element={<Home />} />

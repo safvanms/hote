@@ -1,7 +1,7 @@
 import React from 'react'
 import './button.css'
 
-const LearnMore = ({content , bg}) => {
+const Button = ({content , bg}) => {
   return (
     <div className='learnMore GenFlex' style={{backgroundColor:bg}}>
       {content}
@@ -9,4 +9,4 @@ const LearnMore = ({content , bg}) => {
   )
 }
 
-export default LearnMore
+export default Button

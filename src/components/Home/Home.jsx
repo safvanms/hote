@@ -4,6 +4,7 @@ import TeaCards from "../TeaCards/TeaCards";
 import NoSugar from "../SugarSec/NoSugar";
 import Hero from "../Hero/Hero";
 import AboutTag from "../AboutTag/AboutTag";
+import Blog from "../HomeBlog/HomeBlog";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       </div> */}
       <AboutTag/>
       <TeaCards />
+      <Blog/>
       <NoSugar />
     </>
   );

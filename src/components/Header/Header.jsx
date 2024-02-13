@@ -3,25 +3,25 @@ import "./header.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { PiHamburgerDuotone } from "react-icons/pi";
 import { GiKnifeFork } from "react-icons/gi";
-
 import LOGO from "../../assets/images/hoté_intl_logo.png";
 import sub_logo from "../../assets/images/hoté_intl.png";
+import { headers } from "../../constants.js";
 
 const Header = () => {
   const [clicked, setClicked] = useState(false);
   const navigate = useNavigate();
-
+  // for toggling the clicked state
   const handleClick = () => {
     setClicked(!clicked);
   };
 
   const year = new Date().getFullYear();
-
+  //internal styles for the Link from react router dom
   const styles = {
     textDecoration: "none",
     color: "#362819",
   };
-
+  //function to rout to the home page
   const getBackHome = () => {
     navigate("/");
   };
@@ -39,26 +39,13 @@ const Header = () => {
 
       <div className="header_right GenFlex lg_screen_menu">
         <ul className=" GenFlex">
-          <li>
-            <NavLink to="/" style={styles} activeClassName="active">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/menu" style={styles} activeClassName="active">
-              Menu
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={"/about"} style={styles} activeClassName="active">
-              About Us
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={"/contact"} style={styles} activeClassName="active">
-              Contact Us
-            </NavLink>
-          </li>
+          {headers?.map(({ no, name, link }) => (
+            <li key={no}>
+              <NavLink to={link} style={styles} activeClassName="active">
+                {name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
         <button>
           <NavLink
@@ -74,38 +61,18 @@ const Header = () => {
       {clicked && (
         <div className="sm_screen_option">
           <ul>
-            <NavLink
-              to="/"
-              style={styles}
-              activeClassName="active"
-              onClick={() => setClicked(false)}
-            >
-              <li>Home</li>
-            </NavLink>
-            <NavLink
-              to="/menu"
-              style={styles}
-              activeClassName="active"
-              onClick={() => setClicked(false)}
-            >
-              <li>Menu</li>
-            </NavLink>
-            <NavLink
-              to={"/about"}
-              style={styles}
-              activeClassName="active"
-              onClick={() => setClicked(false)}
-            >
-              <li>About Us</li>
-            </NavLink>
-            <NavLink
-              to={"/contact"}
-              style={styles}
-              activeClassName="active"
-              onClick={() => setClicked(false)}
-            >
-              <li>Contact Us</li>
-            </NavLink>
+            {headers.map(({ no, name, link }) => (
+              <NavLink
+                to={link}
+                style={styles}
+                activeClassName="active"
+                onClick={() => setClicked(false)}
+                key={no}
+              >
+                <li>{name}</li>
+              </NavLink>
+            ))}
+
             <li className="review_btn" onClick={() => setClicked(false)}>
               <NavLink
                 to={"/review"}

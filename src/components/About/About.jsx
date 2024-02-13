@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.css";
-
 import main from "../../assets/images/hoté_intl_logo.png";
 import sub from "../../assets/images/hoté_intl.png";
 import Sticker from "../Stickers/Sticker";
@@ -32,7 +31,7 @@ const About = () => {
         </div>
       </div>
       <Sticker />
-      <TandC/>
+      <TandC />
     </>
   );
 };

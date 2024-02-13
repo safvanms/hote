@@ -28,10 +28,6 @@
   filter: blur(75px);
 }
 
-/* * {
-  scrollbar-color: var(--espresso) var(--bg);
-} */
-
 * {
   scrollbar-width: thin; 
   scrollbar-color: var(--espresso) transparent; 

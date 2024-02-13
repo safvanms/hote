@@ -163,8 +163,38 @@ export const menus = [
       {
         id: 1,
         name: "Coming Soon ! ",
-        price: '',
+        price: "",
       },
     ],
+  },
+];
+
+// header elements
+
+export const headers = [
+  {
+    no: 1,
+    name: "Home",
+    link: "/",
+  },
+  {
+    no: 2,
+    name: "Menu",
+    link: "/menu",
+  },
+  {
+    no: 4,
+    name: "Blogs",
+    link: "/blogs",
+  },
+  {
+    no: 3,
+    name: "About Us",
+    link: "/about",
+  },
+  {
+    no: 5,
+    name: "Contact Us",
+    link: "/contact",
   },
 ];
