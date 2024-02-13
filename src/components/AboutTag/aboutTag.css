@@ -1,7 +1,7 @@
 .about_tag {
   justify-content: space-between;
   margin: 20px 0;
-  padding: 30px 120px;
+  padding: 30px 60px;
   background-color: var(--espresso);
   color: #fff;
   cursor: pointer;

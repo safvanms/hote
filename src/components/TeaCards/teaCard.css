@@ -38,6 +38,8 @@
   justify-content: flex-start;
   height: 325px;
   padding: 0 10px;
+  scrollbar-width: none; 
+  scrollbar-color: transparent transparent; 
 }
 
 .cards::-webkit-scrollbar {
@@ -105,12 +107,9 @@
 
 @media (max-width: 799px) {
   .cards_container {
-    padding: 10px 0px 20px 10px;
+    padding: 10px 5px 20px 5px;
   }
 
-  .cards {
-    padding: 0 10px;
-  }
   .cards {
     gap: 30px;
   }
