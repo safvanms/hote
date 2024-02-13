@@ -13,7 +13,7 @@ const About = () => {
         <div className="about_sec GenFlex">
           <h1>About us</h1>
           <p>
-            Welcome to hoté international <strong>hoté intl</strong> , where
+            Welcome to hoté international ie <strong>hoté intl</strong> , where
             tradition meets innovation. Founded in 2024, we are dedicated to
             providing a unique experience for tea and coffee enthusiasts. Our
             café offers a diverse selection of beverages and traditional tastes,

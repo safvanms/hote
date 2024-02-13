@@ -4,5 +4,6 @@
   color: #fff;
   font-size: 10px;
   flex-direction: column;
+  white-space: nowrap;
 }
 

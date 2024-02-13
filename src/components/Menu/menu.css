@@ -1,3 +1,7 @@
+.menu_page{
+  min-height: 90vh;
+}
+
 .menu_container {
   align-items: flex-start;
   margin: 100px;
@@ -105,9 +109,9 @@
 
   .menu_blur2 {
     background: #efefefad;
-    top: 36rem;
+    bottom: 50px;
     width: 40rem;
-    height: 10rem;
+    height: 5rem;
     left: -20rem;
   }
 }

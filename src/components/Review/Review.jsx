@@ -40,7 +40,6 @@ const Review = () => {
   };
 
   const handleKeyPress = (e) => {
-    // const inputValue = e.target.value.toLowerCase();
     if (showWarning === true) {
       return;
     } else if (e.key !== "Backspace" && e.target.value.trim().length >= 0) {
@@ -49,11 +48,6 @@ const Review = () => {
       );
       setShowWarning(true);
     }
-    // else if (
-    //   badWords.some((word) => inputValue.includes(word.toLowerCase()))
-    // ) {
-    //   alert("Please do not write any unusual or abusive contents.");
-    // }
   };
 
   return (
@@ -88,7 +82,6 @@ const Review = () => {
             </form>
           </div>
         </div>
-      </div>
       <div className="GenFlex">
         <p className="review_stuff ">
           {expand ? reviewStuff : reviewStuff.slice(0, 150) + "..."}
@@ -99,6 +92,7 @@ const Review = () => {
             {expand ? " read less" : "read more"}
           </span>
         </p>
+      </div>
       </div>
     </>
   );

@@ -1,6 +1,8 @@
 .review {
   padding: 40px 0;
   min-height: 90vh;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .review_container {
@@ -55,7 +57,7 @@
 }
 
 .review_stuff {
-  width: 80%;
+  width: 90%;
   text-align: justify;
   margin-bottom: 30px;
   font-size: 16px;

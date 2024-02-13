@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
-    <>
+    <div div className="menu_page">
       <div className="menu_container ">
         <div className="blur in-blur1 menu_blur1"></div>
         <h1>menú de hoté</h1>
@@ -87,7 +87,7 @@ const Menu = () => {
           Go Home
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 
