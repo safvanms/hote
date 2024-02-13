@@ -1,5 +1,6 @@
 .review {
   padding: 40px 0;
+  min-height: 90vh;
 }
 
 .review_container {

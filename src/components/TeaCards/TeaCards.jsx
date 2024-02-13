@@ -2,7 +2,8 @@ import React from "react";
 import "./teaCard.css";
 import { products } from "../../constants";
 import { useNavigate } from "react-router-dom";
-import Leaves from '../../assets/images/leaves.png'
+import Leaves from "../../assets/images/leaves.svg";
+import Button from '../Button/Button'
 
 const TeaCards = () => {
   const navigate = useNavigate();
@@ -14,8 +15,8 @@ const TeaCards = () => {
     <div className="cards_container">
       <img src={Leaves} alt="leaves" className="leaves" />
       <div className="card_heading GenFlex">
-      <h2>Featured Beverages</h2>
-        <p onClick={handleGoToMenu}>View Menu</p>
+        <h2>Featured Beverages</h2>
+        <p className="view_menu_btn" onClick={handleGoToMenu}>View Menu</p>
       </div>
       <div className="cards GenFlex">
         {products?.map(({ id, item, image, desc }) => (
@@ -28,6 +29,9 @@ const TeaCards = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="sm_view_menu_btn" onClick={handleGoToMenu}>
+        <Button content={"View Menu"} bg={"#362819"}/>
       </div>
     </div>
   );

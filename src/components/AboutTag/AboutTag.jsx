@@ -1,6 +1,6 @@
 import React from "react";
 import "./aboutTag.css";
-import LearnMore from "../LearnMore/LearnMore";
+import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 
 const AboutTag = () => {
@@ -13,7 +13,7 @@ const AboutTag = () => {
   return (
     <div className="about_tag GenFlex" onClick={handleGoAbout}>
       <p>Aware the Quality | Keep Visiting ! </p>
-      <LearnMore />
+      <Button content={'know more'} bg={'#362819'}/>
     </div>
   );
 };

@@ -6,7 +6,7 @@
 
 :root {
   --textColor: #412626;
-  --bg: #e6f2f2;
+  --bg: #e7e8e8;
   --coffee: #4a2c00;
   --espresso: #362819;
 }
@@ -29,5 +29,5 @@
 }
 
 /* * {
-  scrollbar-color: transparent transparent;
+  scrollbar-color: var(--espresso) var(--bg);
 } */

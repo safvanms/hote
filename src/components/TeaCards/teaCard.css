@@ -1,30 +1,34 @@
 .cards_container {
   padding: 20px 5px 20px 10px;
   margin-top: 25px;
-  background-color: lightgreen;
   position: relative;
+  background: linear-gradient(to bottom , #edebe9 , #edebe9);
 }
 
-.leaves{
-  width: 100px;
+.leaves {
+  width: 60px;
   position: absolute;
-  top: -10px;
-  right: 100px;
+  top: -8px;
+  right: 0px;
   z-index: 0;
-  transform: rotate(-30deg);
 }
 
 .card_heading {
-  padding: 5px 20px 20px 20px;
+  padding: 5px 80px 20px 20px;
   justify-content: space-between;
   color: var(--espresso);
+  cursor: pointer;
 }
 
-.card_heading p {
+.view_menu_btn {
   font-size: 12px;
   cursor: pointer;
   font-weight: 600;
   z-index: 1000;
+}
+
+.card_heading p:hover {
+  color: #0a0aad;
 }
 
 .cards {
@@ -38,6 +42,7 @@
 
 .cards::-webkit-scrollbar {
   height: 0px;
+  width: 0px;
 }
 
 .card {
@@ -94,19 +99,35 @@
   opacity: 1;
 }
 
+.sm_view_menu_btn{
+  display: none;
+}
+
 @media (max-width: 799px) {
+  .cards_container {
+    padding: 10px 0px 20px 10px;
+  }
+
   .cards {
-   gap: 30px;
+    padding: 0 10px;
+  }
+  .cards {
+    gap: 30px;
   }
   .card_heading {
     padding: 5px 12px 20px 5px;
   }
-  .leaves{
-    width: 100px;
-    position: absolute;
-    top: -10px;
-    right: 50px;
-    z-index: 0;
-    transform: rotate(-30deg);
+  .leaves {
+    width: 60px;
+  }
+  .view_menu_btn{
+    display: none;
+  }
+  .sm_view_menu_btn{
+    display: block;
+    width: max-content;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
   }
 }

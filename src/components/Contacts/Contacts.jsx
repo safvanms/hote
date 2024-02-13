@@ -4,7 +4,7 @@ import './contacts.css'
 
 const Contacts = () => {
   return (
-    <div>
+    <div className='contacts_container GenFlex'>
       Contacts
     </div>
   )

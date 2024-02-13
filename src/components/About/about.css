@@ -41,7 +41,7 @@
 @media (max-width: 799px) {
   .about {
     padding: 10px 0;
-    height: 100vh;
+    min-height: 90vh;
   }
 
   .about_sec {
