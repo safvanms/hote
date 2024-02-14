@@ -48,12 +48,26 @@
   object-position: center;
   border-radius: 15px;
   filter: brightness(50%);
+  transition: 0.3s ease-in;
 }
 
 .h_blog_image:hover {
   transform: scale(1.05);
   transition: 0.5s ease-in-out;
   filter: brightness(30%);
+}
+
+.h_blog_label{
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background-color: #eeececaf;
+  color: var(--espresso);
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 800;
 }
 
 .h_blog_title {

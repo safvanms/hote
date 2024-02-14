@@ -10,16 +10,16 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <AboutTag/>
+      <TeaCards />
       {/* <div className="home GenFlex">
         <div className="home_heads GenFlex">
           <h1>Take a Break , </h1>
           <h1>Order a cup !</h1>
         </div>
       </div> */}
-      <AboutTag/>
-      <TeaCards />
-      <Blog/>
       <NoSugar />
+      <Blog/>
     </>
   );
 };

@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./homeblog.css";
 import Button from "../Button/Button";
 import { blogs } from "../../blogs";
 import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
+  const [number, setNumber] = useState(0);
+
   const navigate = useNavigate();
 
   const openAllBlogs = () => {
     navigate("/blogs");
   };
 
-  const evenHour = new Date().getHours() % 2 === 0;
+  useEffect(() => {
+    const updateBlog = () => {
+      const randomIndex = Math.floor(Math.random() * blogs.length);
+      if (randomIndex !== number) {
+        setNumber(randomIndex);
+      }
+    };
+    // Update blog initially
+    updateBlog();
+  });
 
-  const showBlog = evenHour ? blogs[0] : blogs[1];
+  
+  const blog = blogs[number];
 
-  const { item, name, image, title, description } = showBlog;
+  const { item, name, image, title, description } = blog;
 
   return (
     <div className="h_blog GenFlex">
@@ -25,6 +37,7 @@ const Blog = () => {
       </div>
       <div className="h_blog_section GenFlex" key={item}>
         <img src={image} alt={name} className="h_blog_image" />
+        <div className="h_blog_label">Trending Blog</div>
         <div className="h_blog_title">{title}</div>
         <div className="h_blog_description">{description}</div>
         <div

@@ -15,8 +15,8 @@ const Hero = () => {
         <div className="hero_right">
           <img src={TeaPot} alt="tea" />
           <div className="drop GenFlex">
-          <h1>Love in Every drop...</h1>
-        </div>
+            <h1>Enjoy every drop. </h1>
+          </div>
         </div>
       </div>
       <div className="blur in-blur2 "></div>

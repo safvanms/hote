@@ -5,7 +5,7 @@ import softDrinks from "../../assets/images/softDrinks.png";
 
 const NoSugar = () => {
   return (
-    <div className="noSugar">
+    <>
       <div className="no_sugar_container GenFlex">
         <div className="no_sugar_image GenFlex">
           <img src={softDrinks} alt="pic" />
@@ -29,7 +29,7 @@ const NoSugar = () => {
           <img src={sugar} alt="pic" />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
