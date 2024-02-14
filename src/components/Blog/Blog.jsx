@@ -1,63 +1,40 @@
 import React from "react";
 import "./blog.css";
-import { useParams } from "react-router-dom";
-import blogs from "../../blogs.json";
+import { useNavigate, useParams } from "react-router-dom";
+import { blogs } from "../../blogs";
+import Button from "../Button/Button";
 
 const Blog = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
 
-  const currentBlog = blogs.blogs.filter((blog) => blog.item === id);
+  const currentBlog = blogs.filter((blog) => blog.item === id);
 
   return (
     <div className="GenFlex">
       <div className="blog">
         {currentBlog.map((filteredBlog) => (
           <div key={filteredBlog.item} className="blog_contents GenFlex">
-            <h1>{filteredBlog.title}</h1>
+            <div className="lg_blog_title GenFlex">
+              <h1>{filteredBlog.title}</h1>
+              <p
+                className="lg_explore_more_btn"
+                onClick={() => navigate("/blogs")}
+              >
+                Explore more Blogs{" "}
+              </p>
+            </div>
             <br />
             <p>{filteredBlog.blog}</p>
             <br />
-            <p>{filteredBlog.blog_sec_2}</p>
-            <br />
-            <p>{filteredBlog.blog_sec3}</p>
-            <br />
-            <p>{filteredBlog.blog_sec4}</p>
-            <br />
-            <p>{filteredBlog.blog_sec5}</p>
-            <br />
-            <p>{filteredBlog.blog_sec6}</p>
-            <br />
-            <p>{filteredBlog.blog_sec7}</p>
-            <br />
-            <p>{filteredBlog.blog_sec8}</p>
-            <br />
-            <p>{filteredBlog.blog_sec9}</p>
-            <br />
-            <p>{filteredBlog.blog_sec10}</p>
-            <br />
-            <p>{filteredBlog.blog_sec11}</p>
-            <br />
-            <p>{filteredBlog.blog_sec12}</p>
-            <br />
-            <p>{filteredBlog.blog_sec13}</p>
-            <br />
-            <p>{filteredBlog.blog_sec14}</p>
-            <br />
-            <p>{filteredBlog.blog_sec15}</p>
-            <br />
-            <p>{filteredBlog.blog_sec16}</p>
-            <br />
-            <p>{filteredBlog.blog_sec17}</p>
-            <br />
-            <p>{filteredBlog.blog_sec18}</p>
-            <br />
-            <p>{filteredBlog.blog_sec19}</p>
-            <br />
-            <p>{filteredBlog.blog_sec20}</p>
-            <br />
-            <p>{filteredBlog.blog_sec21}</p>
-            <br />
-            <p>{filteredBlog.blog_sec22}</p>
+            {Object.keys(filteredBlog).map((key) =>
+              key.startsWith("blog_sec") && filteredBlog[key] ? (
+                <div key={key}>
+                  <p>{filteredBlog[key]}</p>
+                  <br />
+                </div>
+              ) : null
+            )}
             <br />
             <img
               src={filteredBlog.image}
@@ -66,6 +43,12 @@ const Blog = () => {
             />
           </div>
         ))}
+        <div
+          className="sm_more_blogs_btn GenFlex"
+          onClick={() => navigate("/blogs")}
+        >
+          <Button content={"Explore More Blogs"} bg={"transparent"} />
+        </div>
       </div>
     </div>
   );

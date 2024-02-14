@@ -80,7 +80,7 @@ const Menu = () => {
           </div>
         </div>
 
-        <div className="blur in-blur2 menu_blur2"></div>
+        {/* <div className="blur in-blur2 menu_blur2"></div> */}
       </div>
       <div className="home_return GenFlex">
         <Link to="/" style={{ textDecoration: "none" }}>

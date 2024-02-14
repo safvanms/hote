@@ -28,7 +28,7 @@
 }
 
 .card_heading p:hover {
-  color: #0a0aad;
+  color: var(--textHover);
 }
 
 .cards {

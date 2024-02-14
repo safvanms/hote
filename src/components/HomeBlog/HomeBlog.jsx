@@ -1,15 +1,11 @@
 import React from "react";
 import "./homeblog.css";
 import Button from "../Button/Button";
-import blogs from "../../blogs.json";
+import { blogs } from "../../blogs";
 import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
   const navigate = useNavigate();
-
-  const handleOpenBlog = (id) => {
-    navigate(`/blogs/${id}`);
-  };
 
   const openAllBlogs = () => {
     navigate("/blogs");
@@ -17,7 +13,7 @@ const Blog = () => {
 
   const evenHour = new Date().getHours() % 2 === 0;
 
-  const showBlog = evenHour ? blogs.blogs[0] : blogs.blogs[1];
+  const showBlog = evenHour ? blogs[0] : blogs[1];
 
   const { item, name, image, title, description } = showBlog;
 
@@ -31,8 +27,11 @@ const Blog = () => {
         <img src={image} alt={name} className="h_blog_image" />
         <div className="h_blog_title">{title}</div>
         <div className="h_blog_description">{description}</div>
-        <div className="h_blog_button" onClick={() => handleOpenBlog(item)}>
-          <Button content={"Learn More"} bg={"white"} />
+        <div
+          className="h_blog_button"
+          onClick={() => navigate(`/blogs/${item}`)}
+        >
+          <Button content={"Read More"} bg={"white"} />
         </div>
       </div>
       <div className="h_sm_more_blogs_btn" onClick={openAllBlogs}>

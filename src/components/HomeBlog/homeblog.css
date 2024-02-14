@@ -25,7 +25,7 @@
 
 .h_blog_heading p:hover {
   cursor: pointer;
-  color: #1e1e94;
+  color: var(--textHover);
 }
 
 .h_sm_more_blogs_btn {
@@ -34,9 +34,9 @@
 
 .h_blog_section {
   margin: 40px 0;
-  width: 80%;
+  width: 85%;
   height: 400px;
-  border-radius: 30px;
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
 }
@@ -46,13 +46,14 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 30px;
-  filter: brightness(70%);
+  border-radius: 15px;
+  filter: brightness(50%);
 }
 
 .h_blog_image:hover {
   transform: scale(1.05);
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
+  filter: brightness(30%);
 }
 
 .h_blog_title {
@@ -86,6 +87,7 @@
   color: var(--espresso);
   font-weight: 800;
   width: 200px;
+  font-size: 12px;
 }
 
 @media (max-width: 799px) {
@@ -104,7 +106,6 @@
   .h_blog_section {
     width: 93%;
     height: 400px;
-    border-radius: 30px;
     overflow: hidden;
   }
   .h_blog_title {

@@ -28,17 +28,19 @@
 
 .header_right ul {
   list-style: none;
-  gap: 40px;
+  gap: 20px;
   color: var(--espresso) !important;
 }
 
 .header_right ul > li {
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .header_right > ul > li .active {
   font-weight: 900;
+  transition: 0.3s ease-in-out;
 }
 
 .header_right ul > li:hover {
