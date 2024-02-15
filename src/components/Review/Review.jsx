@@ -16,24 +16,26 @@ const Review = () => {
   // function calls when onSubmitting for sent to the email
   const sendEmail = (e) => {
     e.preventDefault();
-    setClicked(true);
-    emailjs
-      .sendForm(
-        "service_f21mj6a",
-        "template_cxfddan",
-        form.current,
-        "3WioZUouk2DZQ6kQE"
-      )
-      .then(
-        (result) => {
-          e.target.reset();
-          setClicked(false);
-          setDone(true);
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
+    if (!clicked) {
+      setClicked(true);
+      emailjs
+        .sendForm(
+          "service_f21mj6a",
+          "template_cxfddan",
+          form.current,
+          "3WioZUouk2DZQ6kQE"
+        )
+        .then(
+          (result) => {
+            e.target.reset();
+            setClicked(false);
+            setDone(true);
+          },
+          (error) => {
+            console.error(error);
+          }
+        );
+    }
   };
 
   const toggleExpand = () => {
@@ -46,11 +48,13 @@ const Review = () => {
       return;
     } else if (e.key !== "Backspace" && e.target.value.trim().length >= 0) {
       alert(
-        "Please refrain from including any inappropriate / sexual / racist /abusive contents in your review."
+        "Please refrain from including any inappropriate / sexual / racist or abusive contents in your review."
       );
       setShowWarning(true);
     }
   };
+
+  console.log(clicked)
 
   return (
     <>
@@ -60,9 +64,15 @@ const Review = () => {
             <img src={Logo} alt="item" />
           </div>
           <div className="review_right">
-            <h1>Write your Reviews</h1>
+            <h1>Write your Reviews and Feedbacks</h1>
 
             <form onSubmit={sendEmail} ref={form}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your Name"
+                required
+              />
               <input
                 type="text"
                 name="account"
@@ -74,13 +84,19 @@ const Review = () => {
                 type="text"
                 rows={4}
                 name="message"
-                placeholder="Write your reviews and suggestions..."
+                placeholder="Write your reviews / feedback / suggestions..."
                 required
               />
-              <button type="submit" value="Send">
+              <button
+                type="submit"
+                value="Send"
+                className={clicked ? "disabled" : "submit_button"}
+                disabled={clicked}
+              >
                 {clicked ? "Sending" : done ? "Sent" : "Send"}
               </button>
-              {done && "Thanks for your Review :) "}
+
+              {done && "Thanks for your Feedback :) "}
             </form>
           </div>
         </div>

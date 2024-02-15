@@ -4,6 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { blogs } from "../../blogs";
 import Button from "../Button/Button";
 
+// single Blog component according to the selection 
+
 const Blog = () => {
   const navigate = useNavigate();
   const { id } = useParams();

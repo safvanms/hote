@@ -4,13 +4,14 @@ import TeaCards from "../TeaCards/TeaCards";
 import NoSugar from "../SugarSec/NoSugar";
 import Hero from "../Hero/Hero";
 import AboutTag from "../AboutTag/AboutTag";
-import Blog from "../HomeBlog/HomeBlog";
+import HomeReview from "../HomeReview/HomeReview";
+import HomeBlog from "../HomeBlog/HomeBlog";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <AboutTag/>
+      <AboutTag />
       <TeaCards />
       {/* <div className="home GenFlex">
         <div className="home_heads GenFlex">
@@ -18,8 +19,9 @@ const Home = () => {
           <h1>Order a cup !</h1>
         </div>
       </div> */}
+      <HomeReview />
       <NoSugar />
-      <Blog/>
+      <HomeBlog />
     </>
   );
 };

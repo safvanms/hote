@@ -40,7 +40,7 @@
   font-family: inherit;
 }
 
-.review_right form button {
+.submit_button {
   width: 30%;
   padding: 10px 15px;
   border-radius: 8px;
@@ -56,11 +56,26 @@
   color: #ffff;
 }
 
+.disabled {
+  width: 30%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-family: inherit;
+  background-color: var(--bg);
+  color: #808080;
+}
+
 .review_stuff {
   width: 90%;
   text-align: justify;
   margin-bottom: 30px;
   font-size: 16px;
+}
+
+.disabled{
+  cursor: not-allowed;
 }
 
 @media (max-width: 799px) {

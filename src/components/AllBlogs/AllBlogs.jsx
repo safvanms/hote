@@ -4,6 +4,10 @@ import { blogs } from "../../blogs";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 
+
+// All Blogs component 
+
+
 const AllBlogs = () => {
   const navigate = useNavigate();
 

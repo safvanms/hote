@@ -4,7 +4,9 @@ import Button from "../Button/Button";
 import { blogs } from "../../blogs";
 import { useNavigate } from "react-router-dom";
 
-const Blog = () => {
+// Home Blog section 
+
+const HomeBlog = () => {
   const [number, setNumber] = useState(0);
 
   const navigate = useNavigate();
@@ -54,4 +56,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default HomeBlog;
