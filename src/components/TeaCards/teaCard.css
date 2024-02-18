@@ -34,7 +34,7 @@
 .cards {
   width: 100%;
   overflow: scroll;
-  gap: 26px;
+  gap: 20px;
   justify-content: flex-start;
   height: 325px;
   padding: 0 10px;
@@ -107,7 +107,7 @@
 
 @media (max-width: 799px) {
   .cards_container {
-    padding: 10px 5px 20px 5px;
+    padding: 10px 5px 15px 5px;
   }
 
   .cards {

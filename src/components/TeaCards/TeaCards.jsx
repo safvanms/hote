@@ -7,10 +7,12 @@ import Button from '../Button/Button'
 
 const TeaCards = () => {
   const navigate = useNavigate();
-// rout to the Menu 
+
+// navigate to the Menu 
   const handleGoToMenu = () => {
     navigate("/menu");
   };
+
   return (
     <div className="cards_container">
       <img src={Leaves} alt="leaves" className="leaves" />
@@ -22,7 +24,7 @@ const TeaCards = () => {
         {products?.map(({ id, item, image, desc }) => (
           <div className="card" key={id}>
             <div className="hover_overlay">hoté intl </div>
-            <img src={image} alt="item" loading="lazy"/>
+            <img src={image} alt="item" />
             <div className="item">
               <h3>{item}</h3>
               <p>{desc}</p>

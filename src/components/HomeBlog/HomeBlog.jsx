@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { blogs } from "../../blogs";
 import { useNavigate } from "react-router-dom";
 
-// Home Blog section 
+// Home Blog section
 
 const HomeBlog = () => {
   const [number, setNumber] = useState(0);
@@ -26,7 +26,6 @@ const HomeBlog = () => {
     updateBlog();
   });
 
-  
   const blog = blogs[number];
 
   const { item, name, image, title, description } = blog;
@@ -38,7 +37,7 @@ const HomeBlog = () => {
         <p onClick={openAllBlogs}>More Blogs </p>
       </div>
       <div className="h_blog_section GenFlex" key={item}>
-        <img src={image} alt={name} className="h_blog_image" loading="lazy"/>
+        <img src={image} alt={name} className="h_blog_image" loading="lazy" />
         <div className="h_blog_label">Trending Blog</div>
         <div className="h_blog_title">{title}</div>
         <div className="h_blog_description">{description}</div>

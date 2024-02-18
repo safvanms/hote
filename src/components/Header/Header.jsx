@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./header.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { PiHamburgerDuotone } from "react-icons/pi";
 import { GiKnifeFork } from "react-icons/gi";
 import LOGO from "../../assets/images/hoté_intl_logo.png";
@@ -10,6 +10,8 @@ import { headers } from "../../constants.js";
 const Header = () => {
   const [clicked, setClicked] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
   // for toggling the clicked state
   const handleClick = () => {
     setClicked(!clicked);
@@ -21,8 +23,12 @@ const Header = () => {
     textDecoration: "none",
     color: "#362819",
   };
+
   //function to rout to the home page
   const getBackHome = () => {
+    if (location.pathname === "/") {
+      return;
+    }
     navigate("/");
   };
 
