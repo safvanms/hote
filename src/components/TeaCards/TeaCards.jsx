@@ -22,7 +22,7 @@ const TeaCards = () => {
         {products?.map(({ id, item, image, desc }) => (
           <div className="card" key={id}>
             <div className="hover_overlay">hoté intl </div>
-            <img src={image} alt="item" />
+            <img src={image} alt="item" loading="lazy"/>
             <div className="item">
               <h3>{item}</h3>
               <p>{desc}</p>

@@ -1,7 +1,7 @@
 import Chai from "./assets/images/chai.webp";
 import MasalaChai from "./assets/images/masala_chai.webp";
 import Green from "./assets/images/green.webp";
-import Mint from "./assets/images/mint.webp";
+// import Mint from "./assets/images/mint.webp";
 import Ginger from "./assets/images/ginger.jpeg";
 import Lemon_Honey from "./assets/images/lemon_honey.jpg";
 import Black from "./assets/images/black.webp";
@@ -33,12 +33,12 @@ export const products = [
     image: Saffron,
     desc: "Simmers the Saffron with rose feels flying... ",
   },
-  {
-    id: 4,
-    item: "Mint tea",
-    image: Mint,
-    desc: "Next level refreshment with some mint fragments",
-  },
+  // {
+  //   id: 4,
+  //   item: "Mint tea",
+  //   image: Mint,
+  //   desc: "Next level refreshment with some mint fragments",
+  // },
   {
     id: 5,
     item: "Lemon & Honey tea",

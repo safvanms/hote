@@ -8,7 +8,7 @@ const NoSugar = () => {
     <>
       <div className="no_sugar_container GenFlex">
         <div className="no_sugar_image GenFlex">
-          <img src={softDrinks} alt="pic" />
+          <img src={softDrinks} alt="pic" loading="lazy"/>
         </div>
         <div className="no_sugar_quote GenFlex">
           <div className="no_sugar_texts GenFlex">
@@ -26,7 +26,7 @@ const NoSugar = () => {
           </div>
         </div>
         <div className="no_sugar_image GenFlex">
-          <img src={sugar} alt="pic" />
+          <img src={sugar} alt="pic" loading="lazy"/>
         </div>
       </div>
     </>

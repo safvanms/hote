@@ -47,14 +47,14 @@
   object-fit: cover;
   object-position: center;
   border-radius: 15px;
-  filter: brightness(50%);
+  filter: brightness(70%);
   transition: 0.3s ease-in;
 }
 
 .h_blog_image:hover {
   transform: scale(1.05);
   transition: 0.5s ease-in-out;
-  filter: brightness(30%);
+  filter: brightness(50%);
 }
 
 .h_blog_label{

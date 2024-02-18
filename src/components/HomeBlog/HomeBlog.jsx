@@ -38,7 +38,7 @@ const HomeBlog = () => {
         <p onClick={openAllBlogs}>More Blogs </p>
       </div>
       <div className="h_blog_section GenFlex" key={item}>
-        <img src={image} alt={name} className="h_blog_image" />
+        <img src={image} alt={name} className="h_blog_image" loading="lazy"/>
         <div className="h_blog_label">Trending Blog</div>
         <div className="h_blog_title">{title}</div>
         <div className="h_blog_description">{description}</div>
