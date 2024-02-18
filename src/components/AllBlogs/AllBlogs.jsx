@@ -10,6 +10,7 @@ const AllBlogs = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
 
+  // navigating into the Blog page according to the id
   const handleOpenBlog = (id) => {
     navigate(`/blogs/${id}`);
   };
