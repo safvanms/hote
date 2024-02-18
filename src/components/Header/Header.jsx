@@ -29,7 +29,7 @@ const Header = () => {
     if (location.pathname === "/") {
       return;
     }
-    navigate("/");
+    navigate("/" , { replace: true });
   };
 
   return (
