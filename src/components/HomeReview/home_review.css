@@ -63,7 +63,7 @@
 
   .h_review_heading h2 {
     justify-content: flex-start;
-    width: 70%;
+    width: 80%;
     font-size: 25px;
   }
 
@@ -72,7 +72,7 @@
   }
   .h_review_btn {
     display: block;
-    margin: 0px 0 15px 0;
+    margin: 10px 0 10px 0;
   }
   .h_review_section {
     margin: 10px 0;

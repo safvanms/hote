@@ -2,7 +2,7 @@
   padding: 20px 5px 30px 10px;
   margin-top: 25px;
   position: relative;
-  background: linear-gradient(to bottom , #edebe9 , #edebe9);
+  background: linear-gradient(to bottom, #edebe9, #edebe9);
 }
 
 .leaves {
@@ -38,8 +38,8 @@
   justify-content: flex-start;
   height: 325px;
   padding: 0 10px;
-  scrollbar-width: none; 
-  scrollbar-color: transparent transparent; 
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
 }
 
 .cards::-webkit-scrollbar {
@@ -101,7 +101,7 @@
   opacity: 1;
 }
 
-.sm_view_menu_btn{
+.sm_view_menu_btn {
   display: none;
 }
 
@@ -119,10 +119,10 @@
   .leaves {
     width: 60px;
   }
-  .view_menu_btn{
+  .view_menu_btn {
     display: none;
   }
-  .sm_view_menu_btn{
+  .sm_view_menu_btn {
     display: block;
     width: max-content;
     padding: 5px;
