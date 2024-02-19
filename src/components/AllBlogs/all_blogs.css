@@ -57,7 +57,7 @@
 .blog_image:hover {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
-  filter: brightness(50%);
+  filter: brightness(40%);
 }
 
 .blogs_title {
@@ -107,5 +107,11 @@
   }
   .all_blogs {
     padding-inline: 10px;
+  }
+  .blogs_title{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }

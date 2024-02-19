@@ -1,16 +1,16 @@
 import React from "react";
 import "./blog.css";
 import { useNavigate, useParams } from "react-router-dom";
-import { blogs } from "../../blogs";
+import blogs from "../../blogs.json";
 import Button from "../Button/Button";
 
-// single Blog component according to the selection 
+// single Blog component according to the selection
 
 const Blog = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const currentBlog = blogs.filter((blog) => blog.item === id);
+  const currentBlog = blogs.blogs.filter((blog) => blog.item === id);
 
   return (
     <div className="GenFlex">
@@ -39,7 +39,7 @@ const Blog = () => {
             )}
             <br />
             <img
-              src={filteredBlog.image}
+              src={require(`../../assets/images/${filteredBlog.image}`)}
               alt={filteredBlog.name}
               className="blog_img"
             />

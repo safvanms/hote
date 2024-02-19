@@ -54,7 +54,7 @@
 .h_blog_image:hover {
   transform: scale(1.05);
   transition: 0.5s ease-in-out;
-  filter: brightness(50%);
+  filter: brightness(40%);
 }
 
 .h_blog_label {

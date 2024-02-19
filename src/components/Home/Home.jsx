@@ -6,6 +6,7 @@ import Hero from "../Hero/Hero";
 import AboutTag from "../AboutTag/AboutTag";
 import HomeReview from "../HomeReview/HomeReview";
 import HomeBlog from "../HomeBlog/HomeBlog";
+import HomeContact from "../HomeContact/HomeContact";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
           <h1>Order a cup !</h1>
         </div>
       </div> */}
+      <HomeContact/>
       <HomeReview />
       <NoSugar />
       <HomeBlog />

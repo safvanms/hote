@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./all_blogs.css";
-import { blogs } from "../../blogs";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 // All Blogs component
 
 const AllBlogs = () => {
-  const navigate = useNavigate();
+  const [blogs, setBlogs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const response = await axios.get("http://localhost:3000/blogs");
+      setBlogs(response.data);
+    };
+    fetchBlogs();
+  }, []);
 
   // navigating into the Blog page according to the id
   const handleOpenBlog = (id) => {
@@ -16,6 +26,7 @@ const AllBlogs = () => {
   };
 
   // Filter blogs based on search term and category
+  
   const filteredBlogs = blogs.filter((blog) =>
     blog.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -38,7 +49,7 @@ const AllBlogs = () => {
           ? filteredBlogs.map(({ item, name, title, image }) => (
               <div className="blogs_contents GenFlex" key={item}>
                 <img
-                  src={image}
+                  src={require(`../../assets/images/${image}`)}
                   alt={name}
                   className="blog_image"
                   loading="lazy"

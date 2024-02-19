@@ -1,6 +1,7 @@
 import React from "react";
 import "./contacts.css";
 import CUP from "../../assets/images/hote_cup.png";
+import Logo from "../../assets/images/hoté_intl.png";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -28,7 +29,7 @@ const Contacts = () => {
           <img src={CUP} alt="cup" />
         </div>
         <div className="contact_details">
-          <h3>hoté intl</h3>
+          <img src={Logo}alt="logo" className="written_logo" />
           <p>Bypass road ,</p>
           <p>Perinthalmanna , </p>
           <p>Malappuram Dt. Kerala. </p>
