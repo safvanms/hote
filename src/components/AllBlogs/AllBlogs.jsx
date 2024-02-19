@@ -2,23 +2,23 @@ import React, { useEffect, useState } from "react";
 import "./all_blogs.css";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import useContentful from "../useContentful"; // Import the useContentful hook
 
 // All Blogs component
 
 const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-
   const navigate = useNavigate();
+  const { getAllBlogs } = useContentful(); // Use the useContentful hook
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const response = await axios.get("http://localhost:3000/blogs");
-      setBlogs(response.data);
+      const fetchedBlogs = await getAllBlogs(); // Fetch blogs using the getAllBlogs function
+      setBlogs(fetchedBlogs);
     };
     fetchBlogs();
-  }, []);
+  }, [getAllBlogs]); // Call useEffect when getAllBlogs changes
 
   // navigating into the Blog page according to the id
   const handleOpenBlog = (id) => {
@@ -26,7 +26,6 @@ const AllBlogs = () => {
   };
 
   // Filter blogs based on search term and category
-  
   const filteredBlogs = blogs.filter((blog) =>
     blog.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -45,11 +44,14 @@ const AllBlogs = () => {
         </div>
       </div>
       <div className="all_blogs GenFlex">
-        {filteredBlogs.length > 0
-          ? filteredBlogs.map(({ item, name, title, image }) => (
-              <div className="blogs_contents GenFlex" key={item}>
+        {filteredBlogs.length > 0 ? (
+          filteredBlogs.map(
+            (
+              { id, name, title, image } // Adjust mapping based on Contentful response structure
+            ) => (
+              <div className="blogs_contents GenFlex" key={id}>
                 <img
-                  src={require(`../../assets/images/${image}`)}
+                  src={`https:${image}`} // Assuming the image URL is absolute
                   alt={name}
                   className="blog_image"
                   loading="lazy"
@@ -57,13 +59,16 @@ const AllBlogs = () => {
                 <div className="blogs_title">{title}</div>
                 <div
                   className="blogs_button"
-                  onClick={() => handleOpenBlog(item)}
+                  onClick={() => handleOpenBlog(id)}
                 >
                   <Button content={"Read more"} bg={"white"} />
                 </div>
               </div>
-            ))
-          : "No such blogs found ! "}
+            )
+          )
+        ) : (
+          <div>Searching blogs !</div>
+        )}
       </div>
     </div>
   );

@@ -40,6 +40,10 @@
   width: 100%;
 }
 
+.blogContent{
+  margin-bottom: 20px !important;
+}
+
 .lg_explore_more_btn {
   color: var(--espresso) !important;
   font-size: 11px;

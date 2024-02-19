@@ -2,7 +2,8 @@
   padding: 20px 5px 30px 10px;
   margin-top: 25px;
   position: relative;
-  background: linear-gradient(to bottom, #edebe9, #edebe9);
+  /* background: linear-gradient(to bottom, #edebe9, #edebe9); */
+  
 }
 
 .leaves {

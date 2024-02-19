@@ -6,7 +6,7 @@ import Hero from "../Hero/Hero";
 import AboutTag from "../AboutTag/AboutTag";
 import HomeReview from "../HomeReview/HomeReview";
 import HomeBlog from "../HomeBlog/HomeBlog";
-import HomeContact from "../HomeContact/HomeContact";
+import HomeMenu from "../HomeMenuCategories/HomeMenu";
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
           <h1>Order a cup !</h1>
         </div>
       </div> */}
-      <HomeContact/>
+      <HomeMenu/>
       <HomeReview />
       <NoSugar />
       <HomeBlog />

@@ -8,6 +8,36 @@ import Black from "./assets/images/black.webp";
 import Coffee from "./assets/images/coffee.jpg";
 import Saffron from "./assets/images/saffron.webp";
 
+// header elements
+
+export const headers = [
+  {
+    no: 1,
+    name: "Home",
+    link: "/",
+  },
+  {
+    no: 2,
+    name: "Menu",
+    link: "/menu",
+  },
+  {
+    no: 4,
+    name: "Blogs",
+    link: "/blogs",
+  },
+  {
+    no: 3,
+    name: "About Us",
+    link: "/about",
+  },
+  {
+    no: 5,
+    name: "Contact Us",
+    link: "/contact",
+  },
+];
+
 export const products = [
   {
     id: 1,
@@ -166,35 +196,5 @@ export const menus = [
         price: "",
       },
     ],
-  },
-];
-
-// header elements
-
-export const headers = [
-  {
-    no: 1,
-    name: "Home",
-    link: "/",
-  },
-  {
-    no: 2,
-    name: "Menu",
-    link: "/menu",
-  },
-  {
-    no: 4,
-    name: "Blogs",
-    link: "/blogs",
-  },
-  {
-    no: 3,
-    name: "About Us",
-    link: "/about",
-  },
-  {
-    no: 5,
-    name: "Contact Us",
-    link: "/contact",
   },
 ];
