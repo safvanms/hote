@@ -70,7 +70,7 @@ const AllBlogs = () => {
         ) : searchTerm ? (
           <div>Sorry, no blogs match your search term.</div>
         ) : (
-          <div>No blogs available.</div>
+          <div>Searching blogs...</div>
         )}
       </div>
     </div>

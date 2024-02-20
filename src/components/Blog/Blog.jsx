@@ -13,20 +13,23 @@ const Blog = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const ID = parseInt(id, 10);
 
   useEffect(() => {
     const fetchBlog = async () => {
       try {
         const blogs = await getAllBlogs();
-        const selectedBlog = blogs.find((blog) => parseInt(blog.id, 10) === ID);
+        const selectedBlog = blogs.find((blog) => {
+          return blog.id === id;
+        });
         setCurrentBlog(selectedBlog || null);
       } catch (error) {
         console.error("Error fetching blog:", error);
       }
     };
     fetchBlog();
-  }, [ID, getAllBlogs]);
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
+
 
   const { title, content, image } = currentBlog || {};
 
