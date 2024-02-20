@@ -84,7 +84,7 @@ const Review = () => {
                 type="text"
                 rows={4}
                 name="message"
-                placeholder="Write your reviews / feedback / suggestions..."
+                placeholder="Write your reviews / feedback / suggestions or Blogs here..."
                 required
               />
               <button

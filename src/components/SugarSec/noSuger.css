@@ -25,6 +25,7 @@
 
 .no_sugar_texts {
   flex-direction: column;
+  cursor: pointer;
 }
 
 .no_sugar_texts h1:nth-child(1) {
@@ -39,6 +40,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
+}
+
+.suggestions{
+  gap: 5px;
+}
+
+.suggestions p{
+font-size: 11px;
+cursor: pointer;
 }
 
 @media (max-width: 799px) {

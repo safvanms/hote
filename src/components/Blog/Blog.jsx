@@ -13,7 +13,6 @@ const Blog = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-
   useEffect(() => {
     const fetchBlog = async () => {
       try {
@@ -29,7 +28,6 @@ const Blog = () => {
     fetchBlog();
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
-
 
   const { title, content, image } = currentBlog || {};
 
@@ -64,6 +62,12 @@ const Blog = () => {
             <Button content={"Explore More Blogs"} bg={"transparent"} />
           )}
         </div>
+        <p className="suggestions GenFlex">
+          <p>To suggest Blogs , or write Blogs </p>
+          <p onClick={() => navigate("/review")} style={{ color: "blue" }}>
+            click here
+          </p>
+        </p>
       </div>
     </div>
   );
