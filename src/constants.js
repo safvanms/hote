@@ -7,6 +7,10 @@ import Lemon_Honey from "./assets/images/lemon_honey.jpg";
 import Black from "./assets/images/black.webp";
 import Coffee from "./assets/images/coffee.jpg";
 import Saffron from "./assets/images/saffron.webp";
+import Beverage from "./assets/images/juice.jpg";
+import Snack from "./assets/images/puff.jpg";
+import Burger from "./assets/images/burger.webp";
+import Sandwich from "./assets/images/sandwich.jpg";
 
 // header elements
 
@@ -38,6 +42,7 @@ export const headers = [
   },
 ];
 
+
 export const products = [
   {
     id: 1,
@@ -63,12 +68,6 @@ export const products = [
     image: Saffron,
     desc: "Simmers the Saffron with rose feels flying... ",
   },
-  // {
-  //   id: 4,
-  //   item: "Mint tea",
-  //   image: Mint,
-  //   desc: "Next level refreshment with some mint fragments",
-  // },
   {
     id: 5,
     item: "Lemon & Honey tea",
@@ -198,3 +197,28 @@ export const menus = [
     ],
   },
 ];
+
+
+export const categories = [
+  {
+    id:1,
+    item:'Healthy Beverages',
+    image:Beverage
+  },
+  {
+    id:2,
+    item:'Yummy Snacks',
+    image:Snack
+  },
+  {
+    id:5,
+    item:'Verities of Burgers',
+    image:Burger
+  },
+  {
+    id:6,
+    item:'Kidilan Sandwiches',
+    image:Sandwich
+  },
+  
+]

@@ -18,15 +18,19 @@ const useContentful = () => {
       const sanitizedEntries = entries.items.map((item) => {
         const image = item.fields.image.fields.file.url;
         const title = item.fields.title.content[0].content[0].value;
-        const content = item.fields.content.content.map((paragraph) => paragraph.content.map((text) => text.value).join('\n\n')).join('\n\n');
+        const content = item.fields.content.content
+          .map((paragraph) =>
+            paragraph.content.map((text) => text.value).join("\n\n")
+          )
+          .join("\n\n");
         const description = item.fields.description.content[0].content[0].value;
         return {
-          id: item.sys.id,
           ...item.fields,
+          id: item.sys.id,
+          description,
           image,
           title,
           content,
-          description
         };
       });
 

@@ -10,15 +10,16 @@ const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
-  const { getAllBlogs } = useContentful(); // Use the useContentful hook
+  const { getAllBlogs } = useContentful();
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const fetchedBlogs = await getAllBlogs(); // Fetch blogs using the getAllBlogs function
+      const fetchedBlogs = await getAllBlogs();
       setBlogs(fetchedBlogs);
     };
     fetchBlogs();
-  }, [getAllBlogs]); // Call useEffect when getAllBlogs changes
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // navigating into the Blog page according to the id
   const handleOpenBlog = (id) => {
@@ -66,8 +67,10 @@ const AllBlogs = () => {
               </div>
             )
           )
+        ) : searchTerm ? (
+          <div>Sorry, no blogs match your search term.</div>
         ) : (
-          <div>Searching blogs !</div>
+          <div>No blogs available.</div>
         )}
       </div>
     </div>

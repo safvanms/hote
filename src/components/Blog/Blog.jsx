@@ -33,7 +33,7 @@ const Blog = () => {
   return (
     <div className="GenFlex">
       <div className="blog">
-        {!currentBlog && <div className="GenFlex">Please wait...</div>}
+        {!currentBlog && <div className="loading GenFlex">Please wait...</div>}
         <div className="blog_contents GenFlex">
           <div className="lg_blog_title GenFlex">
             <h1>{title}</h1>
