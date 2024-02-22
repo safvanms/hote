@@ -1,0 +1,38 @@
+.terms_and_condition {
+  min-height: 90vh;
+  flex-direction: column;
+  padding: 60px 40px;
+}
+
+.terms_and_condition h1 {
+  color: var(--espresso);
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.t_and_c_content {
+  width: 75%;
+  margin: 5px 0 0 0;
+}
+
+.t_and_c_content h2 {
+  color: var(--coffee);
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+}
+
+.t_and_c_content p {
+  color: gray;
+  font-size: 15px;
+  margin-left: 15px;
+  letter-spacing: 0.4px;
+}
+
+@media (max-width: 799px) {
+  .terms_and_condition {
+    padding: 40px 20px;
+  }
+  .t_and_c_content {
+    width: 100%;
+  }
+}

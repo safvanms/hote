@@ -42,7 +42,6 @@ export const headers = [
   },
 ];
 
-
 export const products = [
   {
     id: 1,
@@ -198,27 +197,151 @@ export const menus = [
   },
 ];
 
-
 export const categories = [
   {
-    id:1,
-    item:'Healthy Beverages',
-    image:Beverage
+    id: 1,
+    item: "Healthy Beverages",
+    image: Beverage,
   },
   {
-    id:2,
-    item:'Yummy Snacks',
-    image:Snack
+    id: 2,
+    item: "Yummy Snacks",
+    image: Snack,
   },
   {
-    id:5,
-    item:'Verities of Burgers',
-    image:Burger
+    id: 5,
+    item: "Verities of Burgers",
+    image: Burger,
   },
   {
-    id:6,
-    item:'Kidilan Sandwiches',
-    image:Sandwich
+    id: 6,
+    item: "Kidilan Sandwiches",
+    image: Sandwich,
   },
-  
-]
+];
+
+export const termsAndConditions = [
+  {
+    id: 1,
+    title: "Introduction",
+    content:
+      "These Terms and Conditions govern your use of hoté intl, including all services, products, and content available at or through the website or cafe premises. By accessing or using any part of hoté intl, you agree to be bound by these Terms and Conditions.  If you do not agree to all the terms and conditions of this agreement, then you may not access hoté intl or use any services.",
+  },
+  {
+    id: 11,
+    title: "Acceptance of Terms",
+    content:
+      "By accessing or using any part of hoté intl's services, you agree to be bound by these Terms and Conditions. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.",
+  },
+  {
+    id: 33,
+    title: "Cafe Services",
+    content:
+      "hoté intl provides a variety of food and beverage services at our cafe. All orders are subject to availability and acceptance by hoté intl.",
+  },
+  {
+    id: 2,
+    title: "Reservation of Rights",
+    content:
+      "We reserve the right to refuse service to anyone for any reason at any time. We reserve the right to modify or discontinue any service or product without notice at any time.",
+  },
+  {
+    id: 3,
+    title: "Service Availability",
+    content:
+      "All orders are subject to availability. If an item is not available, we will inform you and refund the amount for that item. We reserve the right to limit the quantities of any products or services that we offer.",
+  },
+  {
+    id: 4,
+    title: "Pricing and Payment",
+    content:
+      "All prices for products and services are subject to change without notice. We accept payment via cash, credit/debit cards, UPI and other electronic payment methods. All payments are due upon receipt. If payment is not received or declined, we reserve the right to refuse service.",
+  },
+  {
+    id: 5,
+    title: "Refund and Return Policy",
+    content:
+      "Refunds or returns are subject to the discretion of hoté intl. Refunds may be issued in the original form of payment or as store credit. To request a refund or return, please contact our customer service team.",
+  },
+  {
+    id: 6,
+    title: "Customer Conduct",
+    content:
+      "Customers are expected to conduct themselves in a respectful and appropriate manner while at hoté intl. Any form of harassment, discrimination, or disruptive behavior will not be tolerated and may result in removal from the premises.",
+  },
+  {
+    id: 8,
+    title: "Intellectual Property",
+    content:
+      "All content, logos, and trademarks displayed on hoté intl's website, mobile app, or cafe premises are the property of hoté intl and may not be used without prior written consent.",
+  },
+  {
+    id: 9,
+    title: "Modification of Terms",
+    content:
+      "hoté intl reserves the right to modify or update these Terms and Conditions at any time without prior notice. It is your responsibility to review these Terms and Conditions periodically for changes.",
+  },
+  {
+    id: 7,
+    title: "Health and Safety",
+    content:
+      "hoté intl adheres to all health and safety regulations to ensure the well-being of our customers and staff. Customers are required to follow any health and safety guidelines posted within the cafe premises.",
+  },
+  {
+    id: 10,
+    title: "Governing Law",
+    content:
+      "These Terms and Conditions are governed by and construed in accordance with the laws of INDIA. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts of Perinthalmanna.",
+  },
+  {
+    id: 55,
+    title: "Contact Information",
+    content:
+      "If you have any questions about these Terms and Conditions, please contact us at muhammedsafvan1ms@gmail.com ",
+  },
+];
+
+export const privacyPolicy = [
+  {
+    id: 1,
+    title: "Information Collection",
+    content:
+      "hoté intl collects personal information from customers for the purpose of providing our services, processing orders, and improving the customer experience. This may include name, contact information, payment details, and other relevant data.",
+  },
+  {
+    id: 2,
+    title: "Use of Information",
+    content:
+      "Personal information collected by hoté intl will only be used for the purposes for which it was collected, unless otherwise authorized by the customer or required by law. We do not sell or share customer information with third parties for marketing purposes.",
+  },
+  {
+    id: 3,
+    title: "Data Security",
+    content:
+      "hoté intl takes reasonable measures to protect the security of customer information and prevent unauthorized access or disclosure. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.",
+  },
+  {
+    id: 4,
+    title: "Cookies",
+    content:
+      "hoté intl may use cookies and similar technologies to enhance the user experience and analyze website usage. By using our website or mobile app, you consent to the use of cookies in accordance with this Privacy Policy.",
+  },
+  {
+    id: 5,
+    title: "Third-party Links",
+    content:
+      "Our website or mobile app may contain links to third-party websites or services. hoté intl is not responsible for the privacy practices or content of these third-party sites. We encourage you to read the privacy policies of any third-party sites you visit.",
+  },
+  {
+    id: 6,
+    title: "Changes to Privacy Policy",
+    content:
+      "hoté intl reserves the right to update or change this Privacy Policy at any time. Any changes will be posted on our website or mobile app, and your continued use of our services after such changes will constitute acceptance of the updated Privacy Policy.",
+  },
+  {
+    id: 7,
+    title: "Contact Us",
+    content:
+      "If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at muhammedsafvan1ms@gmail.com.",
+  },
+];

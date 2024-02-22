@@ -14,9 +14,9 @@ const TandC = () => {
     <div>
       <div className="t_and_c GenFlex">
         <p onClick={() => goToThePage("terms-and-condition")}>
-          Terms and Conditions
+          Terms & Conditions
         </p>
-        <p onClick={() => goToThePage("privacy-policy")}>Privacy</p>
+        <p onClick={() => goToThePage("privacy-policy")}>Privacy Policy</p>
         <p onClick={() => goToThePage("contact")}>Contact </p>
       </div>
     </div>

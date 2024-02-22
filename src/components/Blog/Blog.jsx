@@ -32,43 +32,43 @@ const Blog = () => {
   const { title, content, image } = currentBlog || {};
 
   return (
-    <div className="GenFlex">
-      <div className="blog">
-        {!currentBlog && <div className="loading GenFlex">Please wait...</div>}
-        <div className="blog_contents GenFlex">
-          <div className="lg_blog_title GenFlex">
-            <h1>{title}</h1>
-            <p
-              className="lg_explore_more_btn"
-              onClick={() => navigate("/blogs")}
-            >
-              Explore more Blogs{" "}
+    <div className="blogContainer GenFlex">
+      {!currentBlog && <div className="loading GenFlex">Please wait...</div>}
+      {currentBlog && (
+        <div className="blog">
+          <div className="blog_contents GenFlex">
+            <div className="lg_blog_title GenFlex">
+              <h1>{title}</h1>
+              <p
+                className="lg_explore_more_btn"
+                onClick={() => navigate("/blogs")}
+              >
+                Explore more Blogs{" "}
+              </p>
+            </div>
+            <br />
+            {content?.split("\n\n").map((paragraph, index) => (
+              <p key={index} className="blogContent">
+                {paragraph}
+              </p>
+            ))}
+            <br />
+            <img src={`https:${image}`} alt="Blog_Image" className="blog_img" />
+          </div>
+          <div
+            className="sm_more_blogs_btn GenFlex"
+            onClick={() => navigate("/blogs")}
+          >
+            <Button content={"Explore more blogs"} bg={""} />
+          </div>
+          <div className="suggestions GenFlex">
+            <p>To suggest Blogs , or write Blogs </p>
+            <p onClick={() => navigate("/review")} style={{ color: "blue" }}>
+              click here
             </p>
           </div>
-          <br />
-          {content?.split("\n\n").map((paragraph, index) => (
-            <p key={index} className="blogContent">
-              {paragraph}
-            </p>
-          ))}
-          <br />
-          <img src={`https:${image}`} alt="Blog_Image" className="blog_img" />
         </div>
-        <div
-          className="sm_more_blogs_btn GenFlex"
-          onClick={() => navigate("/blogs")}
-        >
-          {currentBlog && (
-            <Button content={"Explore More Blogs"} bg={"transparent"} />
-          )}
-        </div>
-        <p className="suggestions GenFlex">
-          <p>To suggest Blogs , or write Blogs </p>
-          <p onClick={() => navigate("/review")} style={{ color: "blue" }}>
-            click here
-          </p>
-        </p>
-      </div>
+      )}
     </div>
   );
 };

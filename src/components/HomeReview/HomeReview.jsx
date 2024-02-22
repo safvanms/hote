@@ -8,7 +8,7 @@ const HomeReview = () => {
   const navigate = useNavigate();
 
   const openAllBlogs = () => {
-    navigate("/review");
+    navigate("/review" );
   };
 
   return (

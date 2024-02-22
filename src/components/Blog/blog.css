@@ -1,8 +1,11 @@
+.blogContainer {
+  min-height: 94vh;
+  position: relative;
+}
+
 .blog {
   width: 80%;
-  min-height: 94vh;
   margin: 30px 20px;
-  position: relative;
 }
 
 .blog p {
@@ -64,6 +67,16 @@
   color: var(--textHover) !important;
 }
 
+.suggestions {
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.suggestions p {
+  font-size: 11px;
+  cursor: pointer;
+}
+
 @media (max-width: 799px) {
   .lg_explore_more_btn {
     display: none;
@@ -81,10 +94,11 @@
     display: block;
     padding: 20px 0 0 0;
     cursor: pointer;
+    width: 100%;
   }
   .sm_more_blogs_btn > * {
-    /* width: 150px; */
     font-size: 11px;
     color: var(--espresso);
+    padding: 12px 0;
   }
 }
