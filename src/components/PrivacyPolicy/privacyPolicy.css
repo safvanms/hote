@@ -17,13 +17,13 @@
   
   .privacy_policy_content h2 {
     color: var(--coffee);
-    font-size: 18px;
+    font-size: 14px;
     margin: 10px 0 5px 0;
   }
   
   .privacy_policy_content p {
     color: gray;
-    font-size: 15px;
+    font-size: 13px;
     margin-left: 15px;
     letter-spacing: 0.4px;
   }
