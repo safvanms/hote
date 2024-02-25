@@ -40,6 +40,11 @@
   font-family: inherit;
 }
 
+.review_right form textarea {
+  width: 360px !important;
+  resize: vertical; 
+}
+
 .submit_button {
   width: 30%;
   padding: 10px 15px;
@@ -74,7 +79,7 @@
   font-size: 16px;
 }
 
-.disabled{
+.disabled {
   cursor: not-allowed;
 }
 

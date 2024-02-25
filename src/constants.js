@@ -197,28 +197,32 @@ export const menus = [
   },
 ];
 
+// categories
+
 export const categories = [
   {
     id: 1,
-    item: "Healthy Beverages",
+    item: "Beverages",
     image: Beverage,
   },
   {
     id: 2,
-    item: "Yummy Snacks",
+    item: "Snacks",
     image: Snack,
   },
   {
     id: 5,
-    item: "Verities of Burgers",
+    item: "Burgers",
     image: Burger,
   },
   {
     id: 6,
-    item: "Kidilan Sandwiches",
+    item: "Sandwiches",
     image: Sandwich,
   },
 ];
+
+// T&C
 
 export const termsAndConditions = [
   {
@@ -300,6 +304,8 @@ export const termsAndConditions = [
       "If you have any questions about these Terms and Conditions, please contact us at muhammedsafvan1ms@gmail.com ",
   },
 ];
+
+// Privacy Policy
 
 export const privacyPolicy = [
   {

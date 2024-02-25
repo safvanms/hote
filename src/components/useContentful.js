@@ -1,5 +1,7 @@
 import { createClient } from "contentful";
 
+import BevImg from "../assets/images/hero.png";
+
 const useContentful = () => {
   const client = createClient({
     space: "tkmo2ppl442w",
@@ -39,7 +41,35 @@ const useContentful = () => {
       console.log("error fetching blogs ", err);
     }
   };
-  return { getAllBlogs };
+
+  const getALlMenus = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "hotDeMenu",
+        select: "fields",
+        order: "fields.id",
+      });
+
+      const sanitizedEntries = entries.items.map((item) => {
+        const menu = item.fields.menu;
+        const price = item.fields.price;
+        const description = item.fields.description;
+        return {
+          ...item.fields,
+          id: item.sys.id,
+          menu,
+          price,
+          description,
+          bevImg: BevImg, 
+        };
+      });
+
+      return sanitizedEntries;
+    } catch (err) {
+      console.log("error fetching menu ", err);
+    }
+  };
+  return { getAllBlogs, getALlMenus };
 };
 
 export default useContentful;

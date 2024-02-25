@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./review.css";
 import Logo from "../../assets/images/hoté_intl_logo.png";
 import emailjs from "@emailjs/browser";
@@ -10,7 +10,7 @@ const Review = () => {
   const [clicked, setClicked] = useState(false);
   const [done, setDone] = useState(false);
   const [expand, setExpand] = useState(false);
-  const [showWarning, setShowWarning] = useState(false);
+  const [showWarning, setShowWarning] = useState(true);
   const form = useRef();
 
   // function calls when onSubmitting for sent to the email
@@ -44,17 +44,23 @@ const Review = () => {
 
   // function for alerting the warning message for the user when typing the message textarea
   const handleKeyPress = (e) => {
-    if (showWarning === true) {
+    if (showWarning === false) {
       return;
     } else if (e.key !== "Backspace" && e.target.value.trim().length >= 0) {
       alert(
         "Please refrain from including any inappropriate / sexual / racist or abusive contents in your review."
       );
-      setShowWarning(true);
+      setShowWarning(false);
     }
   };
 
-  console.log(clicked)
+  // to show warning on each mount
+
+  useEffect(() => {
+    return () => {
+      setShowWarning(true);
+    };
+  }, []);
 
   return (
     <>

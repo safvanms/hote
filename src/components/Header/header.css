@@ -19,7 +19,8 @@
 }
 
 .logo {
-  width: 60px !important;
+  width: 59px !important;
+  image-rendering: crisp-edges;
 }
 
 .header_right {

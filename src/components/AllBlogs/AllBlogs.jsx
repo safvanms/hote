@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./all_blogs.css";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
-import useContentful from "../useContentful"; // Import the useContentful hook
+import useContentful from "../useContentful";
 
 // All Blogs component
 

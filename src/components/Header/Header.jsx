@@ -26,10 +26,9 @@ const Header = () => {
 
   //function to rout to the home page
   const getBackHome = () => {
-    if (location.pathname === "/") {
-      return;
+    if (location.pathname !== "/") {
+      navigate("/", { replace: true });
     }
-    navigate("/" ,{ replace: true });
   };
 
   return (
@@ -47,7 +46,12 @@ const Header = () => {
         <ul className=" GenFlex">
           {headers?.map(({ no, name, link }) => (
             <li key={no}>
-              <NavLink to={link} style={styles} activeClassName="active">
+              <NavLink
+                to={link}
+                style={styles}
+                activeClassName="active"
+                replace
+              >
                 {name}
               </NavLink>
             </li>
