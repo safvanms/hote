@@ -1,6 +1,5 @@
 import { createClient } from "contentful";
 
-import BevImg from "../assets/images/hero.png";
 
 const useContentful = () => {
   const client = createClient({
@@ -60,7 +59,6 @@ const useContentful = () => {
           menu,
           price,
           description,
-          bevImg: BevImg, 
         };
       });
 
@@ -69,7 +67,35 @@ const useContentful = () => {
       console.log("error fetching menu ", err);
     }
   };
-  return { getAllBlogs, getALlMenus };
+
+  const getAllBurgersAndSandwiches = async () => {
+    try {
+      const entries = await client.getEntries({
+        content_type: "burgersAndSandwichesMenu",
+        select: "fields",
+        order: "fields.id",
+      });
+
+      const sanitizedEntries = entries.items.map((item) => {
+        const menu = item.fields.menu;
+        const price = item.fields.price;
+        const description = item.fields.description;
+        return {
+          ...item.fields,
+          id: item.sys.id,
+          menu,
+          price,
+          description,
+        };
+      });
+
+      return sanitizedEntries;
+    } catch (err) {
+      console.log("error fetching menu ", err);
+    }
+  };
+
+  return { getAllBlogs, getALlMenus, getAllBurgersAndSandwiches };
 };
 
 export default useContentful;
