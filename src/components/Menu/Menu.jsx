@@ -4,23 +4,31 @@ import { Link } from "react-router-dom";
 import useContentful from "../useContentful";
 import BevImg from "../../assets/images/hero.png";
 import Burger from "../../assets/images/burger_bg.png";
+import Fries from "../../assets/images/fries.png";
+
 
 const Menu = () => {
   const [menus, setMenus] = useState([]);
   const [burgers, setBurgers] = useState([]);
+  const [snacks, setSnacks] = useState([]);
   const { getALlMenus } = useContentful();
   const { getAllBurgersAndSandwiches } = useContentful();
+  const { getAllSnacks } = useContentful();
 
   useEffect(() => {
     const fetchBlogs = async () => {
       const fetchedMenus = await getALlMenus();
       const fetchedBurgers = await getAllBurgersAndSandwiches();
+      const fetchedSnacks = await getAllSnacks();
       setMenus(fetchedMenus);
       setBurgers(fetchedBurgers);
+      setSnacks(fetchedSnacks);
     };
     fetchBlogs();
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  console.log(snacks)
 
   return (
     <div div className="menu_page">
@@ -81,6 +89,30 @@ const Menu = () => {
             </div>
           </div>
         )}
+
+        {snacks.length > 0 && (
+          <div className="menu GenFlex">
+            <div className="menu_image GenFlex">
+              <h2>hoté Snacks</h2>
+              <img src={Fries} alt="beverages" />
+            </div>
+            <div className="menu_right">
+              <ul className="menu_list">
+                {snacks?.map(({ id, menu, price, description }) => (
+                  <>
+                    <li key={id}>
+                      <div>{menu}</div> <div>₹{price}</div>
+                    </li>
+                    <li className="menu_description">
+                      {description ? "- " + description : ""}
+                    </li>
+                  </>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
 
       </div>
       <div className="home_return GenFlex">

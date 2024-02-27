@@ -16,8 +16,8 @@ const TandC = () => {
         <p onClick={() => goToThePage("terms-and-condition")}>
           Terms & Conditions
         </p>
-        <p onClick={() => goToThePage("privacy-policy")}>Privacy Policy</p>
         <p onClick={() => goToThePage("contact")}>Contact </p>
+        <p onClick={() => goToThePage("privacy-policy")}>Privacy Policy</p>
       </div>
     </div>
   );

@@ -98,7 +98,7 @@
   }
   .review_right form input,
   .review_right form textarea {
-    width: 90vw;
+    width: 90vw !important;
     padding-inline: 10px;
   }
 }
