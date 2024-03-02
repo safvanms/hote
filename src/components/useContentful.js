@@ -1,6 +1,5 @@
 import { createClient } from "contentful";
 
-
 const useContentful = () => {
   const client = createClient({
     space: "tkmo2ppl442w",
@@ -13,7 +12,7 @@ const useContentful = () => {
       const entries = await client.getEntries({
         content_type: "blogs",
         select: "fields",
-        order: "fields.name",
+        order: "fields.id",
       });
 
       const sanitizedEntries = entries.items.map((item) => {
@@ -122,7 +121,7 @@ const useContentful = () => {
     }
   };
 
-  return { getAllBlogs, getALlMenus, getAllBurgersAndSandwiches , getAllSnacks};
+  return { getAllBlogs, getALlMenus, getAllBurgersAndSandwiches, getAllSnacks };
 };
 
 export default useContentful;

@@ -27,7 +27,7 @@ const AllBlogs = () => {
   };
 
   // Filter blogs based on search term and category
-  const filteredBlogs = blogs.filter((blog) =>
+  const filteredBlogs = blogs?.filter((blog) =>
     blog.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -45,8 +45,8 @@ const AllBlogs = () => {
         </div>
       </div>
       <div className="all_blogs GenFlex">
-        {filteredBlogs.length > 0 ? (
-          filteredBlogs.map(
+        {filteredBlogs?.length > 0 ? (
+          filteredBlogs?.map(
             (
               { id, name, title, image } // Adjust mapping based on Contentful response structure
             ) => (
