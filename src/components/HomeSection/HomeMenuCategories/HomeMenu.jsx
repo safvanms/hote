@@ -1,7 +1,7 @@
 import React from "react";
 import "./homeMenu.css";
 
-import { categories } from "../../constants";
+import { categories } from "../../../constants";
 
 const HomeMenu = () => {
   return (

@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
+import Home from "./components/HomeSection/Home/Home.jsx";
 import Menu from "./components/Menu/Menu";
 import Review from "./components/Review/Review";
 import About from "./components/About/About";
@@ -11,8 +11,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Contacts from "./components/Contacts/Contacts";
-import AllBlogs from "./components/AllBlogs/AllBlogs";
-import Blog from "./components/Blog/Blog";
+import AllBlogs from "./components/BlogSection/AllBlogs/AllBlogs.jsx";
+import Blog from "./components/BlogSection/Blog/Blog.jsx";
 
 export default function App() {
   return (

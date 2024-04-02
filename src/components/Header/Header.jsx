@@ -68,6 +68,8 @@ const Header = () => {
         </button>
       </div>
 
+      {/* small device menu section */}
+
       {clicked && (
         <div className="sm_screen_option">
           <ul>

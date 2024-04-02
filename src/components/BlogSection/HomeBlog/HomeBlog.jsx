@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./homeblog.css";
-import Button from "../Button/Button";
+import Button from "../../Button/Button";
 import { useNavigate } from "react-router-dom";
-import useContentful from "../useContentful";
+import useContentful from "../../useContentful";
 
 // Home Blog section
 

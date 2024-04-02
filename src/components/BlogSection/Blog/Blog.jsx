@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./blog.css";
 import { useNavigate, useParams } from "react-router-dom";
-import useContentful from "../useContentful";
-import Button from "../Button/Button";
+import useContentful from "../../useContentful";
+import Button from "../../Button/Button";
 
 // Single Blog component according to the selection
 

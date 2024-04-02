@@ -15,8 +15,8 @@ const markerIcon = new L.Icon({
   popupAnchor: [0, -40],
 });
 
-const latitude = 10.9771;
-const longitude = 76.2193;
+const latitude = 10.9860;
+const longitude = 76.2389;
 
 // const position = [latitude, longitude];
 

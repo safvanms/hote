@@ -1,8 +1,8 @@
 import React from "react";
 import "./home_review.css";
 import { useNavigate } from "react-router-dom";
-import Write from "../../assets/images/write.jpg";
-import Button from "../Button/Button";
+import Write from "../../../assets/images/write.jpg"
+import Button from "../../Button/Button";
 
 const HomeReview = () => {
   const navigate = useNavigate();

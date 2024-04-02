@@ -1,11 +1,11 @@
 import React from "react";
 import "./home.css";
-import TeaCards from "../TeaCards/TeaCards";
-import NoSugar from "../SugarSec/NoSugar";
-import Hero from "../Hero/Hero";
-import AboutTag from "../AboutTag/AboutTag";
+import TeaCards from "../../TeaCards/TeaCards";
+import NoSugar from "../../SugarSec/NoSugar";
+import Hero from "../../Hero/Hero";
+import AboutTag from "../../AboutTag/AboutTag";
 import HomeReview from "../HomeReview/HomeReview";
-import HomeBlog from "../HomeBlog/HomeBlog";
+import HomeBlog from "../../BlogSection/HomeBlog/HomeBlog";
 import HomeMenu from "../HomeMenuCategories/HomeMenu";
 
 const Home = () => {
