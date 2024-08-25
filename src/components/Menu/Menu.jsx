@@ -5,30 +5,44 @@ import useContentful from "../useContentful";
 import BevImg from "../../assets/images/menu_img.jpg";
 import Burger from "../../assets/images/burger_bg.png";
 import Fries from "../../assets/images/fries.png";
+import Choco from "../../assets/images/choco.png";
 import { MenuItems } from "./MenuItems";
 
 const Menu = () => {
+  const [fetched, setFetched] = useState(false);
   const [menus, setMenus] = useState([]);
   const [burgers, setBurgers] = useState([]);
   const [snacks, setSnacks] = useState([]);
+  const [shakes, setShakes] = useState([]);
 
   const navigate = useNavigate();
 
-  const { getALlMenus, getAllBurgersAndSandwiches, getAllSnacks } =
-    useContentful();
+  const { getEntriesByContentType } = useContentful();
 
   useEffect(() => {
-    const fetchBlogs = async () => {
-      const fetchedMenus = await getALlMenus();
-      const fetchedBurgers = await getAllBurgersAndSandwiches();
-      const fetchedSnacks = await getAllSnacks();
-      setMenus(fetchedMenus);
-      setBurgers(fetchedBurgers);
-      setSnacks(fetchedSnacks);
+    const fetchData = async () => {
+      try {
+        const fetchedMenus = await getEntriesByContentType("hotDeMenu");
+        const fetchedBurgers = await getEntriesByContentType(
+          "burgersAndSandwichesMenu"
+        );
+        const fetchedSnacks = await getEntriesByContentType("hotSnacks");
+        const fetchedShakes = await getEntriesByContentType(
+          "hotRefreshingMilkshakes"
+        );
+
+        setMenus(fetchedMenus);
+        setBurgers(fetchedBurgers);
+        setSnacks(fetchedSnacks);
+        setShakes(fetchedShakes);
+        setFetched(true);  // Mark fetching as completed
+      } catch (error) {
+        console.log("Error fetching data: ", error);
+      }
     };
-    fetchBlogs();
-    //eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
+    if (!fetched) fetchData();
+  },[fetched,getEntriesByContentType]);
 
   const returnHome = () => {
     navigate("/", { replace: true });
@@ -63,12 +77,22 @@ const Menu = () => {
         {snacks.length > 0 && (
           <MenuItems title="hoté Snacks" image={Fries} items={snacks} />
         )}
+
+        {shakes.length > 0 && (
+          <React.Fragment>
+            <MenuItems
+              title="hoté refreshing shakes"
+              image={Choco}
+              items={shakes}
+              reverse={true}
+            />
+          </React.Fragment>
+        )}
       </div>
 
       <div className="home_return GenFlex" onClick={returnHome}>
-        Go Home
+        Click to explore more .
       </div>
-      
     </div>
   );
 };

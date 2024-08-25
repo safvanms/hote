@@ -33,7 +33,7 @@
 
 .cards {
   width: 100%;
-  overflow: scroll;
+  overflow: auto;
   gap: 20px;
   justify-content: flex-start;
   height: 325px;
@@ -95,6 +95,7 @@
   transition: opacity 0.5s ease;
   border-radius: 10px;
   cursor: all-scroll;
+  cursor: default;
 }
 
 .card:hover .hover_overlay {

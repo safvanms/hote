@@ -1,5 +1,7 @@
 import { createClient } from "contentful";
 
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 const useContentful = () => {
   const client = createClient({
     space: "tkmo2ppl442w",
@@ -40,88 +42,34 @@ const useContentful = () => {
     }
   };
 
-  const getALlMenus = async () => {
+  const getEntriesByContentType = async (contentType, retries = 5) => {
     try {
       const entries = await client.getEntries({
-        content_type: "hotDeMenu",
+        content_type: contentType,
         select: "fields",
         order: "fields.id",
       });
 
-      const sanitizedEntries = entries.items.map((item) => {
-        const menu = item.fields.menu;
-        const price = item.fields.price;
-        const description = item.fields.description;
-        return {
-          ...item.fields,
-          id: item.sys.id,
-          menu,
-          price,
-          description,
-        };
-      });
-
-      return sanitizedEntries;
+      return entries.items.map((item) => ({
+        ...item.fields,
+        id: item.sys.id,
+        menu: item.fields.menu,
+        price: item.fields.price,
+        description: item.fields.description,
+      }));
     } catch (err) {
-      console.log("error fetching menu ", err);
+      if (err?.response?.status === 429 && retries > 0) {
+        console.log(`Rate limit exceeded, retrying in ${(6 - retries) * 1000}ms...`);
+        await delay((6 - retries) * 1000); // Exponential backoff
+        return getEntriesByContentType(contentType, retries - 1);
+      } else {
+        console.log(`Error fetching ${contentType}: `, err);
+        return [];
+      }
     }
   };
 
-  const getAllBurgersAndSandwiches = async () => {
-    try {
-      const entries = await client.getEntries({
-        content_type: "burgersAndSandwichesMenu",
-        select: "fields",
-        order: "fields.id",
-      });
-
-      const sanitizedEntries = entries.items.map((item) => {
-        const menu = item.fields.menu;
-        const price = item.fields.price;
-        const description = item.fields.description;
-        return {
-          ...item.fields,
-          id: item.sys.id,
-          menu,
-          price,
-          description,
-        };
-      });
-
-      return sanitizedEntries;
-    } catch (err) {
-      console.log("error fetching menu ", err);
-    }
-  };
-
-  const getAllSnacks = async () => {
-    try {
-      const entries = await client.getEntries({
-        content_type: "hotSnacks",
-        select: "fields",
-        order: "fields.id",
-      });
-
-      const sanitizedEntries = entries.items.map((item) => {
-        const menu = item.fields.menu;
-        const price = item.fields.price;
-        const description = item.fields.description;
-        return {
-          ...item.fields,
-          id: item.sys.id,
-          menu,
-          price,
-          description,
-        };
-      });
-
-      return sanitizedEntries;
-    } catch (err) {
-      console.log("error fetching menu ", err);
-    }
-  };
-
-  return { getAllBlogs, getALlMenus, getAllBurgersAndSandwiches, getAllSnacks };
+  return { getAllBlogs, getEntriesByContentType };
 };
 
 export default useContentful;
