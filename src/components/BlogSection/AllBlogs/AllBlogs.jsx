@@ -3,6 +3,7 @@ import "./all_blogs.css";
 import Button from "../../Button/Button";
 import { useNavigate } from "react-router-dom";
 import useContentful from "../../useContentful";
+import Loader from "../../Loader/Loader";
 
 // All Blogs component
 
@@ -70,7 +71,7 @@ const AllBlogs = () => {
         ) : searchTerm ? (
           <div>Sorry, no blogs match your search term.</div>
         ) : (
-          <div>Searching blogs...</div>
+          <Loader content={"Searching Blogs ..."}/>
         )}
       </div>
     </div>

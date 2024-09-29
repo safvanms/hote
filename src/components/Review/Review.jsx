@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./review.css";
 import Logo from "../../assets/images/hoté_intl_logo.png";
 import emailjs from "@emailjs/browser";
+import Loader from "../Loader/Loader";
 
 const reviewStuff =
   "We value your reviews either positive or negative. Your feedback helps us improve our services and serve you better. Thank you for taking the time to share your thoughts with us. Your opinions matter to us and contribute to the continual enhancement of our offerings. We strive to provide an exceptional experience to each and every customer, and your feedback plays a crucial role in achieving that goal. Your satisfaction is our priority, and we are grateful for your support. Your reviews inspire us to maintain the highest standards of quality and customer service. We appreciate your trust and loyalty to our brand and look forward to serving you again soon and exceeding your expectations. Thank you for choosing us as your preferred destination for hoté intl and for being a valued member of our community.";
@@ -12,6 +13,7 @@ const Review = () => {
   const [expand, setExpand] = useState(false);
   const [showWarning, setShowWarning] = useState(true);
   const form = useRef();
+  const inputRef = useRef();
 
   // function calls when onSubmitting for sent to the email
   const sendEmail = (e) => {
@@ -23,7 +25,7 @@ const Review = () => {
           "service_f21mj6a",
           "template_cxfddan",
           form.current,
-          "3WioZUouk2DZQ6kQE"
+          "fbA4Gg1mDdnJ94rZG"
         )
         .then(
           (result) => {
@@ -33,6 +35,7 @@ const Review = () => {
           },
           (error) => {
             console.error(error);
+            alert("We regret , please try again later.");
           }
         );
     }
@@ -57,6 +60,7 @@ const Review = () => {
   // to show warning on each mount
 
   useEffect(() => {
+    inputRef.current.focus();
     return () => {
       setShowWarning(true);
     };
@@ -77,6 +81,7 @@ const Review = () => {
                 type="text"
                 name="name"
                 placeholder="Enter your Name"
+                ref={inputRef}
                 required
               />
               <input
@@ -93,16 +98,19 @@ const Review = () => {
                 placeholder="Write your reviews / feedback / suggestions or Blogs here..."
                 required
               />
-              <button
-                type="submit"
-                value="Send"
-                className={clicked ? "disabled" : "submit_button"}
-                disabled={clicked}
-              >
-                {clicked ? "Sending" : done ? "Sent" : "Send"}
-              </button>
+              {clicked ? (
+                <Loader content={"Sending..."} />
+              ) : done ? (
+                <button className="submit_button" disabled>
+                  Sent
+                </button>
+              ) : (
+                <button type="submit" className="submit_button">
+                  Send
+                </button>
+              )}
 
-              {done && "Thanks for your Feedback :) "}
+              {done && <p>Thanks for your Feedback :) </p>}
             </form>
           </div>
         </div>

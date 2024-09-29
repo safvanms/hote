@@ -36,7 +36,7 @@
 
 .no_sugar_texts h1:nth-child(2) {
   font-size: 54px;
-  background: linear-gradient(to bottom, rgb(129, 0, 0), Black);
+  background: linear-gradient(to bottom, var(--textColor), Black);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;

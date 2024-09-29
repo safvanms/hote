@@ -7,6 +7,7 @@ import Burger from "../../assets/images/burger_bg.png";
 import Fries from "../../assets/images/fries.png";
 import Choco from "../../assets/images/choco.png";
 import { MenuItems } from "./MenuItems";
+import Loader from "../Loader/Loader";
 
 const Menu = () => {
   const [fetched, setFetched] = useState(false);
@@ -58,8 +59,7 @@ const Menu = () => {
           <MenuItems title="hoté beverages" image={BevImg} items={menus} />
         ) : (
           <div className="menu_waiting GenFlex" style={{ height: "300px" }}>
-            <p>Please wait... </p>
-            <p> Your menu is on the way !</p>
+           <Loader content={'Your Order is on the way !'}/>
           </div>
         )}
 
